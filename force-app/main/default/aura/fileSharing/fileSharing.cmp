@@ -1,0 +1,13 @@
+<aura:component controller="fileSharing" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <!--Declare Event Handlers--> 
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+     
+    <!--Declare Attributes-->
+    <aura:attribute name="contactList" type="list" />   
+    <aura:attribute name="isSelectAll" type="boolean" default="false"/>
+ 
+   <aura:iteration items="{!v.contactList}" var="item">
+       {!item}
+    </aura:iteration>
+
+</aura:component>

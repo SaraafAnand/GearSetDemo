@@ -1,0 +1,6 @@
+<apex:page standardController="Account" >
+    <script>
+    alert('message');
+    </Script>
+
+    </apex:page>

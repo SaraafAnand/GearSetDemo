@@ -1,0 +1,34 @@
+<apex:page controller="googleApi_CurrentLocation" sidebar="false" showHeader="false">
+    <script>
+    var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+ var x=crd.latitude;
+     var y=crd.longitude;
+ console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+passStringToController(x,y);    
+};
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+};
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+    
+    </script>
+    <apex:form id="fm">
+    <apex:actionFunction name="passStringToController" action="{!myMethod}" rerender="fm">
+    <apex:param name="firstParam" value="" assignTo="{!myString}" />
+        <apex:param name="secondParam" value="" assignTo="{!myString1}" />
+</apex:actionFunction>
+   </apex:form>
+</apex:page>

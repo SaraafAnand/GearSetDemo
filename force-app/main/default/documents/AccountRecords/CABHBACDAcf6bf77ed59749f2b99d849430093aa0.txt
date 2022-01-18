@@ -1,0 +1,5 @@
+AccountId,Name,Industry,Rating,
+0017F00000IpP0QQAV,Xyz,Banking,Hot,
+0017F00000IpP0RQAV,PQR,Banking,Cold,
+0017F00000IpP0SQAV,ABC,Agriculture,Warm,
+0017F00000IpP0TQAV,HJKL,Education,Hot,

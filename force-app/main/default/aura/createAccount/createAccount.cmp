@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+	<aura:attribute name="newAccount" type="Object"/>
+    <aura:attribute name="simpleNewAccount" type="Object"/>
+    <aura:attribute name="newAccountError" type="String"/>
+   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <force:recordData aura:id="accountRecordCreator" 
+                      layoutType="FULL"
+                      targetRecord="{!v.newAccount}"
+                      targetFields="{!v.simpleNewAccount}"
+                      targetError="{!v.newAccountError}" />
+    <lightning:input aura:id="accountField" label="First Name" value="{!v.simpleNewAccount.Name}"/>
+    <lightning:button label="Save Account" variant="brand" onclick="{!c.handleSaveAccount}"/>
+     <aura:if isTrue="{!not(empty(v.newAccountError))}">
+        <div class="recordError">
+            {!v.newAccountError}</div>
+    </aura:if>
+</aura:component>

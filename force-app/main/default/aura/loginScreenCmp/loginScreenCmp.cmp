@@ -1,0 +1,35 @@
+<aura:component >
+    
+    <div class="slds-grid  slds-grid_vertical slds-card slds-align_absolute-center slds-size_1-of-3">
+        
+        <div class="slds-p-around_large">
+         <div class="slds-col slds-p-around_x-small slds-align_absolute-center " >  
+             <legend class="slds-form-element__legend slds-form-element__label"><p style="color:blue;font-size: large;">Sign In </p></legend>
+          </div>   
+         <div class="slds-col slds-p-around_small">
+            <lightning:input variant="label-hidden"></lightning:input>
+        </div>
+        <div class="slds-col slds-p-around_small">
+            <lightning:input variant="label-hidden"></lightning:input>
+        </div>
+           <div class="container">
+        <div class="slds-col slds-p-around_small">
+            <lightning:button label="Add New"  onclick="{c.handleClick}" class="bt" ></lightning:button>
+            
+        </div>
+           
+        </div>
+        </div>
+         <div class="slds-col slds-p-top_small reg">
+            	<legend class="slds-form-element__legend slds-form-element__label slds-col ">
+            <p style="font-size:small;">Don't have an account ? <a href="http://www.yahoo.com">Register Now!</a> </p>
+            </legend>
+            </div>
+      
+    </div>
+    <div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  
+</div>
+</aura:component>

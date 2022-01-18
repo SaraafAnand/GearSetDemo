@@ -1,0 +1,32 @@
+<apex:page controller="AccountChildDisplay">
+    <apex:form >
+        <apex:pageBlock title="account records with their childs">
+            <apex:pageBlockTable value="{!accs}" var="a">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.industry}"/>
+                <apex:column >
+                    <apex:pageBlockTable value="{!a.tasks}" var="b">
+                        <apex:column value="{!b.Whatid}"/>
+                        <apex:column value="{!b.Subject}"/>
+                        <apex:column >
+                            <apex:pageBlockTable value="{!a.opportunities}" var="c">
+                                <apex:column value="{!c.name}"/>
+                                <apex:column value="{!c.stagename}"/>
+                                <apex:column >
+                                    <apex:pageBlockTable value="{!a.events}" var="d">
+                                        <apex:column value="{!d.subject}"/>
+                                        <apex:column >
+                                            <apex:pageBlockTable value="{!a.cases}" var="e">
+                                                <apex:column value="{!e.Origin}"/>
+                                            </apex:pageBlockTable>
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:column>
+                            </apex:pageBlockTable>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

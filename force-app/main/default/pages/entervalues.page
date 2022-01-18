@@ -1,0 +1,14 @@
+<apex:page standardController="Opportunity" extensions="updateNameClass" recordSetVar="opplist">
+
+<apex:form >
+
+<apex:pageblock title="Step 3- enter the new value for the field:">
+            value: &nbsp; <apex:inputText value="{!fldValue}" required="false"/>
+<apex:pageblockbuttons >
+<apex:commandButton value="previous" action="{!gotostep2}"/>
+<apex:commandButton value="update" action="{!updateMethod}"/>
+<apex:commandButton value="Cancel" action="{!cancel}"/>
+</apex:pageblockbuttons>
+</apex:pageblock>
+</apex:form>
+</apex:page>

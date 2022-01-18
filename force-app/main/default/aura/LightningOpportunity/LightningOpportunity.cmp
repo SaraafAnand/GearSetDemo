@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+access="global" >
+
+    <aura:attribute name="val" type="String" default="" />
+       
+            <div class="slds-p-around_small">
+            <lightning:recordEditForm objectApiName="Opportunity">
+                <lightning:messages />
+                <lightning:inputField aura:id="sel" fieldName="Opportunity_Type__c" onchange="{!c.onchange}" />
+                 <aura:if isTrue="{!v.val == 'SEP'}">
+                <lightning:inputField fieldName="QLE_Type__c" />
+                <lightning:inputField fieldName="QLE_Event_Date__c" />
+                </aura:if>
+                              </lightning:recordEditForm>
+            </div>
+       
+</aura:component>

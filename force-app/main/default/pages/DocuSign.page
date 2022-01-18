@@ -1,0 +1,6 @@
+<apex:page controller="DocuSign" >
+    <apex:form >
+    <apex:commandButton value="getRequest" action="{!requestToken}" />
+       {!result_Token}
+        </apex:form>
+</apex:page>

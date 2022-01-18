@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;pre&gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;span id=&amp;quot;hideThisHomePageComp&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+$j = jQuery.noConflict();
+$j(document).ready(function() {
+                var startYear=1985;
+                var endYear=2024;
+                var htmlStr=&amp;#39;&amp;#39;;
+                if(startYear&amp;lt;endYear){
+                                for(i=startYear;i&amp;lt;endYear+1;i++){
+                                                htmlStr += &amp;quot;&amp;lt;option value=&amp;quot;&amp;quot;+i+&amp;quot;&amp;quot;&amp;gt;&amp;quot;+i+&amp;quot;&amp;lt;/option&amp;gt;&amp;quot;;
+                                }
+                                $j(&amp;#39;#calYearPicker&amp;#39;).html(htmlStr);
+                }
+                $j(&amp;#39;#sidebarDiv #hideThisHomePageComp&amp;#39;).parent().parent().hide();
+                }
+);
+&amp;lt;/script&amp;gt;&lt;/pre&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

@@ -1,0 +1,76 @@
+.THIS .bt{
+     background-color: #33FFC0;
+  	
+}
+.THIS .card{
+     width: 40%;
+  	
+}
+
+.THIS .title{
+     background-color: #33FFC0;
+  	
+}
+.THIS .reg{
+	margin-left : 50%;
+}
+
+.THIS.box{
+    width: 20%;
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40%;  
+}
+.THIS.flex-row {
+    flex-direction: row;
+    display: flex;
+}
+
+.THIS.flex-column {
+    flex-direction: column;
+    display: flex;
+}
+
+.THIS.flex-body {
+    display: flex;
+}
+
+.THIS.flex-body div:not([class*="flex"]) {
+    border: 1px solid white;
+    flex: 1 1 200px;
+    width: 300px;
+}
+
+.THIS.container {
+  display: grid;
+
+  /* 2 columns, equally wide: */
+  grid-template-columns: 1fr 1fr;
+
+  /* gaps between each column and row. */
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  /* ...can also be shortened to grid-gap: 20px; */
+}
+
+.THIS.wrapper { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-auto-rows: 100px; 
+} 
+
+.THIS.box1 { 
+  grid-column-start: 1; 
+  grid-column-end: 4; 
+  grid-row-start: 1; 
+  grid-row-end: 3; 
+}
+
+.THIS.box2 { 
+  grid-column-start: 1; 
+  grid-row-start: 3; 
+  grid-row-end: 5; 
+}

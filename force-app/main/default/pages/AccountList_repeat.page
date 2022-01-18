@@ -1,0 +1,11 @@
+<apex:page controller="Account_Repeat">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+    		<apex:repeat value="{!accounts}" var="a">
+            	<apex:outputText value="{!a.Name}"/>
+                <apex:outputText value="{!a.phone}"/> 
+        	</apex:repeat>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+  
+</apex:page>

@@ -1,0 +1,137 @@
+<aura:component >
+    <aura:attribute name="title" type="String" default="Custom Title"/>
+
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'SMS &amp; Only', 'value': 'option1'},
+    {'label': 'SMS only', 'value': 'option2'}
+    ]"/>
+    <aura:attribute name="value" type="String" default="option1"/>
+    
+    <aura:attribute name="typeOptions" type="List" default="[
+    {'label': 'Aged', 'value': 'Aged'},
+    {'label': 'Live', 'value': 'Live'}
+    ]"/>
+    <aura:attribute name="typeValue" type="String" default="Aged"/>
+    
+    <aura:attribute name="botOptions" type="List" default="[
+    {'label': 'ON', 'value': 'ON'},
+    {'label': 'OFF', 'value': 'OFF'}
+    ]"/>
+    <aura:attribute name="botValue" type="String" default="ON"/>
+     <lightning:card>
+   <aura:set attribute="title">
+	{! v.title }
+        </aura:set>
+<article class="slds-card">
+  
+<div class="slds-grid slds-grid_vertical slds-card slds-card__header">
+    
+    <lightning:radioGroup name="campaign Type"
+                          label="campaign Type*"
+                          options="{!v.options}"
+                          value="{! v.value }"
+                          type="radio"
+                          class="slds-col"/> 
+
+     <lightning:radioGroup name="Type"
+                          label="Type*"
+                          options="{!v.typeOptions }"
+                          value="{!v.typeValue}"
+                          class="slds-col" 
+                          type="radio"
+                          />  
+    <div class="slds-col">
+    <legend class="slds-form-element__legend slds-form-element__label">Lead Process Time*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+    <lightning:radioGroup name="BOT Reply"
+                          label="BOT Reply"
+                          options="{!v.botOptions}"
+                          value="{!v.botValue}"
+                          class="slds-col" 
+                          type="radio"
+                          />
+    <div class="slds-col">
+    <legend class="slds-form-element__legend slds-form-element__label">Client Name*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+    <div class="slds-col">
+        <legend class="slds-form-element__legend slds-form-element__label">University/Company Name*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+    <div class="slds-col">
+    <legend class="slds-form-element__legend slds-form-element__label">Campaign Name*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+    <div class="slds-col">
+        <legend class="slds-form-element__legend slds-form-element__label">Sms/Calling Campaign Twilio Numbers*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+  <div class="slds-col">
+<lightning:button label="Add New"  onclick="{c.handleClick}" class="bt" ></lightning:button>
+
+</div>
+    
+    </div>
+    </article>
+    </lightning:card>
+ <lightning:card>
+   <aura:set attribute="title">
+	{! v.title }
+        </aura:set>
+<article class="slds-card">
+  
+<div class="slds-grid slds-grid_vertical slds-card slds-card__header">
+    
+    <lightning:radioGroup name="campaign Type"
+                          label="campaign Type*"
+                          options="{!v.options}"
+                          value="{! v.value }"
+                          type="radio"
+                          class="slds-col"/> 
+
+     <lightning:radioGroup name="Type"
+                          label="Type*"
+                          options="{!v.typeOptions }"
+                          value="{!v.typeValue}"
+                          class="slds-col" 
+                          type="radio"
+                          />  
+    <div class="slds-col">
+    <legend class="slds-form-element__legend slds-form-element__label">Lead Process Time*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+    <lightning:radioGroup name="BOT Reply"
+                          label="BOT Reply"
+                          options="{!v.botOptions}"
+                          value="{!v.botValue}"
+                          class="slds-col" 
+                          type="radio"
+                          />
+    <div class="slds-col">
+    <legend class="slds-form-element__legend slds-form-element__label">Client Name*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+    <div class="slds-col">
+        <legend class="slds-form-element__legend slds-form-element__label">University/Company Name*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+    <div class="slds-col">
+    <legend class="slds-form-element__legend slds-form-element__label">Campaign Name*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+    <div class="slds-col">
+        <legend class="slds-form-element__legend slds-form-element__label">Sms/Calling Campaign Twilio Numbers*</legend>
+<lightning:input variant="label-hidden"></lightning:input>
+</div>
+  <div class="slds-col">
+<lightning:button label="Add New"  onclick="{c.handleClick}" class="bt" ></lightning:button>
+
+</div>
+    
+    </div>
+    </article>
+    </lightning:card>
+    
+    
+</aura:component>

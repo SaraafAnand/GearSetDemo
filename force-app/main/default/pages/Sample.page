@@ -1,0 +1,5 @@
+<apex:page standardController="Account" extensions="Sample" >
+    <apex:form >
+    <apex:commandButton value="cloneAccount" action="{!cloneRec}"/>
+    </apex:form>
+</apex:page>

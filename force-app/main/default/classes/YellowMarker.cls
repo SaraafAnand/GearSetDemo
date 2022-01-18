@@ -1,0 +1,10 @@
+// Extension for the Marker class
+public class YellowMarker extends Marker {
+    public override void write() {
+        System.debug('Writing some text using the yellow marker.');
+//  discount();discount();
+    }
+    public void getList(){
+         discount(); 
+    }
+}

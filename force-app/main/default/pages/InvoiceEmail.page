@@ -1,0 +1,10 @@
+<!--*Author:S.Anand
+	* Version:1.0
+	* Requirement:1.Create a custom button sendEmail on invoice detail page
+              2.when we click on button , Email should be sent to the manager of the user who prepared Invoice record.
+	* CreatedDate:08/11/2017
+
+  -->
+<apex:page standardController="InvoiceLineItems__c" extensions="InvoiceEmail" action="{!send}" >
+      
+</apex:page>

@@ -1,0 +1,11 @@
+<aura:component controller="ClassController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:attribute name="objController" type="ClassController" ></aura:attribute>
+    <div class="slds-box slds-theme_shade">
+        <li>Developer Name is {!v.objController.developerName} </li>
+        <li>Developer age is {!v.objController.developerAge} years old </li>
+    </div>
+    <aura:iteration items="{!v.objController.developerAccounts}" var="acc">
+        <li>{!acc.Name}</li>
+    </aura:iteration>
+</aura:component>

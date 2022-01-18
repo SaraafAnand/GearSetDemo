@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <consumerKey>81g44rhu5aa0jr</consumerKey>
+    <consumerSecret>i0RSSbRDL7/F+A7B279zZ3BBGPdiC2rX</consumerSecret>
+    <executionUser>anandov@gmail.com</executionUser>
+    <friendlyName>LinkedIn</friendlyName>
+    <iconUrl>https://login.salesforce.com/icons/linkedin-black.png</iconUrl>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>LinkedIn</providerType>
+    <registrationHandler>SimpleFacebookRegistrationHandler</registrationHandler>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <userInfoUrl>https://api.linkedin.com/v2/me</userInfoUrl>
+</AuthProvider>

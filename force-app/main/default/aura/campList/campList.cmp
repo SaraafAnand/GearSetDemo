@@ -1,0 +1,11 @@
+<aura:component >
+	<aura:attribute name="item" type="camping_Item__c"></aura:attribute>
+    Name:
+    <ui:outputText value="{!V.item.Name}" />
+    Price:
+    <ui:outputText value="{!V.item.Price__c}" />
+    Quantity:
+    <ui:outputText value="{!V.item.Quantity__c}" />
+    Packed:
+    <ui:outputText value="{!V.item.packed__c}" />
+</aura:component>

@@ -1,0 +1,7 @@
+<apex:page controller="DocuSign" action="{!readcode}" >
+ {!code}
+    <apex:form >
+    <apex:commandButton value="Token" action="{!request_Token}"/>
+       
+        </apex:form>
+</apex:page>

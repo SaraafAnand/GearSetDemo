@@ -1,0 +1,8 @@
+<aura:component >
+	<c:facetHeader >
+    Nice body !
+        <aura:set attribute="header">
+            Hello
+        </aura:set>
+    </c:facetHeader>
+</aura:component>

@@ -1,0 +1,7 @@
+<aura:component controller="spinner">
+   <aura:attribute name="contactsList" type="contact" default="{sobjectType : 'Contact'}" ></aura:attribute>
+    <lightning:button value="getContacts" onclick="{!c.clickedbutton}"></lightning:button>
+   <aura:iteration items="{!v.contactsList}" var="con">
+    {!con.lastName}
+    </aura:iteration>
+</aura:component>

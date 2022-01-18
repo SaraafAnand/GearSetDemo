@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Types Accepted --></label>
+        <name>Types_Accepted__c</name>
+        <picklistValues>
+            <masterLabel>Discover</masterLabel>
+            <translation><!-- Discover --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NAUI</masterLabel>
+            <translation><!-- NAUI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PADI</masterLabel>
+            <translation><!-- PADI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI</masterLabel>
+            <translation><!-- SSI --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

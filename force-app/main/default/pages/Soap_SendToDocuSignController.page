@@ -1,0 +1,11 @@
+<apex:page controller="Soap_SendToDocuSignController">
+<h1>Your eSignature request is being sent to DocuSign API!</h1>
+<hr/>
+<apex:form >
+<apex:commandButton value="Send Again!" action="{!SendNow}"/>
+      <apex:inputFile value="{!File}" contentType="{!filetype}" filename="{!filename}"  />
+
+</apex:form>
+<hr/>
+<strong>The DocuSign EnvelopeId:</strong>{!envelopeId}<br/>
+</apex:page>

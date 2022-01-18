@@ -1,0 +1,4 @@
+<aura:component controller="spinner">
+
+    <lightning:button value="getContacts" onclick="{!clickedbutton}"></lightning:button>
+</aura:component>

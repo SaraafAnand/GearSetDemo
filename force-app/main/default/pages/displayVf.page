@@ -1,0 +1,18 @@
+<apex:page standardController="opportunity" extensions="displayvalues">
+    <apex:form > 
+        <apex:pageblock title="Step 2 - Select the field to be updated">
+            <span>Fields: </span>
+            <apex:selectList multiselect="false" size="1" value="{!opt}">
+                <apex:selectOptions value="{!OppNames}">
+                </apex:selectOptions>
+            </apex:selectList>
+            
+            <apex:pageblockbuttons >
+                <apex:commandButton value="previous" action="{!gotopage1}"/>
+                <apex:commandButton value="Next" action="{!step3}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageblockbuttons>
+        </apex:pageblock>
+    </apex:form>
+        
+</apex:page>

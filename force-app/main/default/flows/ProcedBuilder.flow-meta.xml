@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Submit_Account_For_Apporval</name>
+        <label>Submit Account For Apporval</label>
+        <locationX>123</locationX>
+        <locationY>124</locationY>
+        <actionName>submit</actionName>
+        <actionType>submit</actionType>
+        <inputParameters>
+            <name>objectId</name>
+            <value>
+                <elementReference>accountId</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>accountId</assignToReference>
+            <name>entityId</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>ProcedBuilder {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ProcedBuilder</label>
+    <processType>AutoLaunchedFlow</processType>
+    <startElementReference>Submit_Account_For_Apporval</startElementReference>
+    <status>Obsolete</status>
+    <variables>
+        <name>accountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>anadov@gmail.com</contactEmail>
+    <label>JenkinsV1</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIDnjCCAoYCCQD90xhX7kqtaTANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMCVVMxEDAOBgNVBAgTB0dlb3JnaWExEzARBgNVBAcTCkFscGhhcmV0dGExEzARBgNVBAoTClNhbGVzZm9yY2UxEzARBgNVBAsTClNhbGVzZnJvY2UxDjAMBgNVBAMTBUFuYW5kMSAwHgYJKoZIhvcNAQkBFhFhbmFuZG92QGdtYWlsLmNvbTAeFw0xOTEwMDkxOTMxMjZaFw0yMDEwMDgxOTMxMjZaMIGQMQswCQYDVQQGEwJVUzEQMA4GA1UECBMHR2VvcmdpYTETMBEGA1UEBxMKQWxwaGFyZXR0YTETMBEGA1UEChMKU2FsZXNmb3JjZTETMBEGA1UECxMKU2FsZXNmcm9jZTEOMAwGA1UEAxMFQW5hbmQxIDAeBgkqhkiG9w0BCQEWEWFuYW5kb3ZAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAslF8XDvxPMrTxS6UuAJ3NFASNtKuJmgnh/QEuarcIVY2L9Gdfc998uC7aYS+b5D858s5IxgGpS//JOKeG1/adq/8Xn1vdqJRrV3yevRUF7kIQB5AHpAUp6oPIBnll6Wz0ScocgJNNpmKI4XmNBw8sAdFw6CM08JvpKOSpFwjx7zrYIgImCmkULAi4wP7n324zkMIC3Ojrm/GlgshXIy3a5UT/7YhuiM0oQCd9gnLQGVPN7onRUfCpHH9yCquEzCvIAQKibkSU8NrVrDiMU7ILpGwMxbcgAs+nTANnBr61FdLv27SzB69juK4iCjYOxRunL6RG0WGAL9JQK0ymEwtUwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAijPyvQ9QRPSx21yv97+T7jXCn5xX1hp3sX3a9LauhRDk9kSbwoBJYuKZm4MJ4QJ7XWeToGdkj+Igh1UCqJ3y/YkVyIUfhJr5pgSvN+TzJWlcrxLbRN3NgnzKJTjx4XW453DfBfIg0ODlSTKB2O40HB2gCxYWaCplvJZaKIhnbnngfuKr5DNfmnVo5hza9zqUF5EtGezrSZpak9cNgN1Xau6AhwH/5S35aJRM1jhT94c5JcoaoG3Ddc5OFmbDX2IgbRXXR2xT4UHHDEdKxDy5LVxoJ3zvcuOCfBxX/TKk60NtTJBclTHXU7YWFSDjgicugiV9E4IHiHPI7pyjs4JFr</certificate>
+        <consumerKey>3MVG9d8..z.hDcPI4BaGqs8Z4gh_jP.io9zQXEg8hLf8ykiKI0pShaF4x_qveXct20XireADx0rhTlYHoLwxW</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

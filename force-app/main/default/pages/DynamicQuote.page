@@ -1,0 +1,47 @@
+<apex:page controller="DyanmicQuote" >
+
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageblockTable value="{!wrapList}" var="wrap">
+            <apex:column >
+            <apex:inputCheckbox value="{!wrap.bool}" />
+            </apex:column>
+            <apex:column headerValue="ProductName">
+                <apex:inputText value="{!wrap.prodPrice.product2.Name}"/>
+            </apex:column>
+            <apex:column headerValue="UnitPrice">
+                <apex:inputText value="{!wrap.prodPrice.unitPrice}"/>
+            </apex:column>
+            <apex:column headerValue="Quantity">
+                <apex:inputText value="{!wrap.Quantity}"/>
+                
+            </apex:column>
+            
+        </apex:pageblockTable>
+        
+    </apex:pageBlock>
+        <apex:commandButton value="ADD" action="{!cartItems}"/>
+        <apex:pageBlock rendered="{!cartList.size > 0}" >
+        <apex:pageBlockTable value="{!cartList}" var="cartItems">
+            <apex:column headerValue="ProductName">
+                <apex:inputText value="{!cartItems.prodPrice.product2.Name}"/>
+            </apex:column>
+            <apex:column headerValue="UnitPrice">
+                <apex:inputText value="{!cartItems.prodPrice.unitPrice}"/>
+            </apex:column>
+            <apex:column headerValue="Quantity">
+                <apex:inputText value="{!cartItems.Quantity}"/>
+            </apex:column>
+               <div class="Red">
+                   
+           
+            <apex:facet name="footer">
+
+          Total={!TotalValue}
+
+              </apex:facet> 
+                    </div>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        </apex:form>
+</apex:page>

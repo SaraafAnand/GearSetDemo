@@ -1,0 +1,12 @@
+<apex:page controller="Srikanth" >
+    <script>
+    function check(){
+    window.open('/003/e?retURL=%2F003%2Fo');
+    }
+    </script>
+    <apex:form >
+        <apex:commandButton value="New" onclick="check()">
+       
+        </apex:commandButton>
+    </apex:form>
+</apex:page>

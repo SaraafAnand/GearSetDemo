@@ -1,0 +1,9 @@
+<apex:page StandardController="Account" extensions="sampledetail">
+    <Script>
+    window.onload = function() {
+  
+  window.open("https://www.google.co.in","_self");
+};
+    </Script>
+  <apex:detail subject="{!Account.Id}" relatedList="false" title="false"/>  
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page controller="Payment_Gateway" >
+    <apex:form >
+        <apex:outputText value="{!result}"></apex:outputText>
+    </apex:form>
+</apex:page>

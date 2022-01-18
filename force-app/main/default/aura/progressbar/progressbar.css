@@ -1,0 +1,50 @@
+.THIS .container {
+  width: 100%;
+}
+
+.THIS .progressbar {
+  counter-reset: step;
+}
+.THIS .progressbar li {
+  list-style: none;
+  display: inline-block;
+  width: 22.74%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.THIS .progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height : 30px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-color: #fff;
+}
+.THIS .progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index : -1;
+}
+.THIS .progressbar li:first-child:after {
+  content: none;
+}
+.THIS .progressbar li.active {
+  color: green;
+}
+.THIS .progressbar li.active:before {
+  border-color: green;
+} 
+.THIS .progressbar li.active + li:after {
+  background-color: green;
+}

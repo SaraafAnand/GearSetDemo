@@ -1,0 +1,6 @@
+Dear
+
+Kindly find lineItems details below
+
+Name:{!InvoiceLineItems__c.Name}
+Quantity:{!InvoiceLineItems__c.Quantity__c}

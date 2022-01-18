@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- dsddd --></label>
+        <name>dsddd__c</name>
+        <picklistValues>
+            <masterLabel>aaaaa</masterLabel>
+            <translation><!-- aaaaa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>aaaaaaa</masterLabel>
+            <translation><!-- aaaaaaa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>sss</masterLabel>
+            <translation><!-- sss --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

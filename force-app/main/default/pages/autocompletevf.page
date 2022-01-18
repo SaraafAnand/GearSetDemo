@@ -1,0 +1,19 @@
+<apex:page standardController="Account" title="{!Account.Name} - Validate Address">
+
+	<c:AddressAutoComplete objectId="{!Account.Id}" 
+		objectName="Account" 
+		addressOneName="Billing"
+		oneStreet="BillingStreet"
+		oneCity="BillingCity"
+		oneState="BillingState"
+		onePostalCode="BillingPostalCode"
+		oneCountry="BillingCountry"
+		includeSecondAddress="true"
+		addressTwoName="Shipping"
+		twoStreet="ShippingStreet"
+		twoCity="ShippingCity"
+		twoState="ShippingState"
+		twoPostalCode="ShippingPostalCode"
+		twoCountry="ShippingCountry" />
+
+</apex:page>

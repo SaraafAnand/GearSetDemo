@@ -1,0 +1,6 @@
+<apex:page controller="Payment_Gateway_Gopay" >
+    <apex:form >
+        <apex:outputText value="{!result}"></apex:outputText>
+    </apex:form>
+
+</apex:page>

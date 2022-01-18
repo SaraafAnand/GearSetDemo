@@ -1,0 +1,90 @@
+<apex:page standardStylesheets="false" sidebar="false">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>    
+    
+  <!--  <apex:stylesheet value="{!URLFOR($Resource.gearZip, 'font-awesome')}"/>  -->       
+ <html>
+ <style>       
+    .sectionA {
+      background-color : aqua !important;
+      }
+     .bd {
+      background-color : red !important;
+      }
+.header {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 14.33%;
+  padding: 10px;
+  margin : 10px;
+}
+/* Clear floats after the columns */
+.row {
+  background-color : blue;    
+      }
+.row1 {
+  background-color : white;    
+      }
+
+     .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+  float:right;    
+  height: 53px; 
+ width: 45px;    
+  border-radius: 50%;
+}
+      </style>
+
+  <head>
+  </head>
+      <body >
+          <div class="sectionA">
+              
+   <div class="row">
+       
+       
+  <div class="btn-group header column" >
+            
+           <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            <label for="settings">Settings</label>
+              </div>
+            <div class="column">
+            <i class="glyphicon glyphicon-user"></i>
+            <label for="settings">Account</label>    
+      </div>
+            <div class="column">
+                 <i class="glyphicon glyphicon-envelope"></i>
+            <label for="settings">Messages</label>           
+      </div>
+     <div class="column">
+      <i class="glyphicon glyphicon-star-empty"></i>
+            <label for="settings">Favourites</label>   
+      </div>
+      <div style="padding-left:40%;">
+          
+         
+       <span class="sp"><img src="{!$Resource.ProfilePic}" alt="Avatar"/> </span> 
+      <label for="settings" style="float:right;padding-top:20px;">Me</label>   
+      </div>
+      </div>
+             <div class="row1">
+                 this is other div
+          </div>
+               <div>
+                 this is another div
+          </div>
+          </div>
+
+  </body>
+
+  </html>
+    </apex:page>

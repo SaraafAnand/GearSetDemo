@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    
+    <aura:attribute name="record" type="object"></aura:attribute>
+    <aura:attribute name="recordError" type="object"></aura:attribute>
+    <aura:attribute name="recordfields" type="object"></aura:attribute>
+	<force:recordData aura:id="recordCreate"
+                      layoutType="FULL"
+                      targetRecord="{!v.record}"
+                      targetError="{!v.recordError}"
+                      targetfields="{!v.recordfields}"></force:recordData>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+    <div class="NewRecord">
+        
+        <lightning:card iconName="standard:contact" title="NewContact">
+        <p class="slds-p-top_medium"><lightning:input aura:id="conField" label="LastName" value="{!v.recordfields.LastName}"></lightning:input> </p>
+        <p class="slds-p-top_medium"><lightning:input aura:id="conField" label="email" value="{!v.recordfields.email}"></lightning:input> </p>
+        <lightning:button class="slds-button_brand" label="SaveContact" variant="brand" onclick="{!c.handleSaveMethod}"></lightning:button>
+        </lightning:card>
+    </div>
+     <aura:if isTrue="{!not(empty(v.recordError))}">
+        {!v.recordError}
+    </aura:if>
+</aura:component>

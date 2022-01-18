@@ -1,0 +1,26 @@
+<!--* Author: S.Anand
+* Version:1.0
+* Requirement:Create a csv file with Account Records and upload that csv file in vf page , using apex class ,read and 
+parse data from csv and insert those records into  Account object.create the csv file with the inserted account records ids also,
+Delete the corresponding records which are provided in csv file with id 
+* CreatedDate:21/10/2017
+-->
+<apex:page controller="AccountCreate_Csv" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="3">
+                <apex:inputFile value="{!blobCsv}" fileName="{!stringCsv}"  />
+                <apex:commandButton value="Convert" action="{!convert_Accountobj}"/>
+                <apex:commandButton value="Export" action="{!export}"/>
+                <apex:commandButton value="New " action="{!newTest}"/>
+            </apex:pageBlockSection>
+            <!-- Displaying the list of account records that are created from the csv file --->
+            <apex:pageBlockTable value="{!accountList}" var="a" rendered="{!(accountList.size!=0)}">
+                <apex:column headerValue="AccountId" value="{!a.id}"/>
+                <apex:column headerValue="Name" value="{!a.Name}"/>
+                <apex:column headerValue="Industry" value="{!a.Industry}"/>
+                <apex:column headerValue="Rating" value="{!a.Rating}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<aura:component controller="MyMapController">
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+  <aura:attribute name="myMap" type="Map" />
+ 
+ <li>Key 1 value is {!v.myMap.key1}</li>
+ <li>Key 2 value is {!v.myMap.key2}</li>
+</aura:component>

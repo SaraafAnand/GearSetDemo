@@ -1,0 +1,68 @@
+<!--*Author:S.Anand
+ 	* Version:40.0
+ 	* Requirement:Create an Opportunity and Opportunity Line items,When we create a new opportunity and with entered product 
+	  details OpportunityLineItems should create in custom manner.
+    * CreatedDate:11/10/2017
+   -->
+<apex:page standardController="Opportunity" extensions="Opportunity_OpportuniyLineItemsUpdated" action="{!wrapperList}" id="page"  >
+   <script >
+      function getRow(id){
+		var row=id.split(":");
+          alert(row[5]);
+          document.getElementById("page:fm:hid").value=row[5]; 
+          fun();
+      }
+    </script>
+
+    <apex:form id="fm">
+        <apex:actionFunction name="fun()" action="{!getData}" reRender="pbs2"/>
+        <apex:inputHidden value="{!rowNo}" id="hid"/>
+        <apex:pageBlock Title="OpportunityDetails" id="pb">
+            <apex:pageBlockSection title="Opportunity Information" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name"/>
+                            <apex:inputField value="{!Opportunity.Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Stage"/>
+                            <apex:inputField value="{!Opportunity.StageName}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="CloseDate"/>
+                            <apex:inputField value="{!Opportunity.Closedate}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Type"/>
+                			<apex:inputField value="{!Opportunity.Type}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Amount"/>
+                            <apex:inputField value="{!Opportunity.Amount}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:commandButton value="Add" action="{!addWrapper}" reRender="pbs2" immediate="true"/>
+                <apex:commandButton value="Delete" action="{!deleteWrapper}" reRender="pbs2" immediate="true"/>
+                </apex:pageBlockSectionItem>    
+           </apex:pageBlockSection>
+            </apex:pageBlock>
+              <apex:pageBlock id="pb1">
+                 <apex:pageBlockTable value="{!optyWrappers}" var="a" >
+                     <apex:column headerValue="sNo" value="{!a.sNo}"/>
+                     <apex:column headerValue="ProductName" >
+                         <apex:inputText value="{!a.productName}" >
+                         	<apex:actionSupport event="onchange" action="{!getData}" immediate="True"/>
+                         </apex:inputText>
+                      </apex:column>   
+                     <apex:column headerValue="Quantity">
+                     		<apex:inputText value="{!a.Quantity}" />
+                     </apex:column>
+                     <apex:column headerValue="UnitPrice">
+                     		<apex:inputText value="{!a.Unitprice}"/>
+                     </apex:column>
+                     <apex:column headerValue="Total">
+                     		<apex:inputText value="{!a.Total}"/>
+                     </apex:column>
+                 </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

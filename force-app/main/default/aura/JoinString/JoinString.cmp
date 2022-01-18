@@ -1,0 +1,34 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+ <aura:attribute type="Map" name="myObject" default="{Name:'',Email:''}"></aura:attribute>
+     <aura:attribute name="pop" Type="String"></aura:attribute>
+   <aura:attribute name="bool" Type="Boolean"></aura:attribute>
+     
+      <form class="slds-form--inline">  
+  <div class="slds-form-element">
+    <label class="slds-form-element__label" for="name">Name</label>
+    <div class="slds-form-element__control">
+      <input type="text" id="name" aura:id="itemname"   />
+    </div>
+  </div>
+  <div class="slds-form-element">
+    <label class="slds-form-element__label" for="email">Email</label>
+    <div class="slds-form-element__control">
+      <input type="text" id="email" aura:id="itemname"   />
+    </div>
+  </div>
+   <lightning:button label="Create Expense" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.clickCreate}"/>
+</form> 
+   
+    <lightning:select aura:id="a_opt" name="a_opt" label="Accounts"  onchange="{!c.onSelectChange}">
+           <aura:if isTrue="{!v.bool}">
+               <option value="">{!v.pop}</option>
+                <aura:set attribute="else">
+ <option value="">--None--</option>
+    </aura:set>
+        </aura:if>
+
+        </lightning:select>
+</aura:component>

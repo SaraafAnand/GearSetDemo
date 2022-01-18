@@ -1,0 +1,76 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="isEdit" type="boolean" default="false"/>
+    <aura:attribute name="recordId" type="String" />    
+    <aura:attribute name="fields" type="String[]" default="['Name','OwnerId','Amount','AccountId','StageName']" />
+                        
+    <div class="slds-m-around_xx-large">        
+        <lightning:button variant="brand"
+                          label="Opportunity Edit Form"
+                          title="Opportunity Edit Form"
+                          onclick="{! c.openModel }" />
+        <aura:if isTrue="{!v.isOpen}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Opportunity Edit Form</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                       	<lightning:accordion aura:id="accordion" activeSectionName="Opprtunity information">
+                            <lightning:accordionSection name="Opprtunity information" label="Opprtunity information">
+                                <aura:if isTrue="{!v.isEdit}">
+                                    <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Opportunity">
+                                        <div class="slds-grid slds-wrap">
+                                            <aura:iteration items="{!v.fields}" var="fName">
+                                                    <div class="slds-col slds-size_1-of-2">
+                                                        <lightning:inputField fieldName="{!fName}" />
+                                                    </div>
+                                                </aura:iteration>
+                                        </div>
+                                    </lightning:recordEditForm>
+                                    <aura:set attribute="else">
+                                        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Opportunity">
+                                            <div class="slds-grid slds-wrap">
+                                                <aura:iteration items="{!v.fields}" var="fName">
+                                                    <div class="slds-col slds-size_1-of-2">
+                                                        <div class="slds-grid">
+                                                            <div class="slds-col slds-size_11-of-12 slds-form-element_readonly">
+                                                                <lightning:outputField fieldName="{!fName}" />
+                                                            </div>
+                                                            <div class="slds-col slds-size_1-of-12">
+                                                                <lightning:buttonIcon size="medium" iconName="utility:edit" variant="bare" 
+                                                                                      onclick="{! c.handleEdit }" class="editIcon"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </aura:iteration>
+                                            </div>
+                                        </lightning:recordViewForm>
+                                    </aura:set>
+                                </aura:if>
+                            </lightning:accordionSection>
+                        </lightning:accordion>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand"
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{! c.Save }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>            
+        </aura:if>
+    </div>
+</aura:component>

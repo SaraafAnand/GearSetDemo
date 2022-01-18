@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SendEmail</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>SendEmail</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/apex.js&quot;)}
+var p = new sforce.SObject(&#39;contact&#39;);
+p.id = &quot;{!Contact.Id}&quot;;
+p.Resettted__c = true;
+p.password__c=&#39;Reset&#39;;
+result = sforce.connection.update([p]);
+alert(&#39;res===&gt;&gt;&#39;+result);
+var message = new sforce.SingleEmailMessage(); 
+
+
+message.targetObjectId = &quot;{!Contact.Id}&quot;;
+message.toAddresses = &quot;{!Contact.Email}&quot;;
+message.templateId = &quot;00X7F000000pun2UAA&quot;; //predefined email template
+var result = sforce.connection.sendEmail([message]); 
+if(result[0].success == &#39;true&#39;) 
+{ 
+
+    alert(&quot;Email sent successfully&quot;); 
+} else 
+{ 
+   // alert(&quot;Sending failed&quot;); 
+}
+location.reload(true);</url>
+</WebLink>

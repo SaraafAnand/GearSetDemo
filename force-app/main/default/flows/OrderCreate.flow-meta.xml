@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>49.0</apiVersion>
+    <dynamicChoiceSets>
+        <name>orderFieldUpdate</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>subtype__c</picklistField>
+        <picklistObject>Order</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>OrderCreate {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OrderCreate</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>NewOrder</name>
+        <label>NewOrder</label>
+        <locationX>109</locationX>
+        <locationY>188</locationY>
+        <inputAssignments>
+            <field>subtype__c</field>
+            <value>
+                <elementReference>orderFieldUpdate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
+    </recordCreates>
+    <startElementReference>NewOrder</startElementReference>
+    <status>Obsolete</status>
+</Flow>

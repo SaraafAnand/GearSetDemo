@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>anandov@gmail.com</contactEmail>
+    <label>GoPay</label>
+    <oauthConfig>
+        <callbackUrl>https://google.co.in</callbackUrl>
+        <consumerKey>3MVG9d8..z.hDcPI4BaGqs8Z4ghbW0ZpgM2VxPjdP0zHlDXNUTiKOeNhzZk3y6cTPZWiyevnQTug2f4kxSgXC</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

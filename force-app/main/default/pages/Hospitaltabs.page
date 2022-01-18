@@ -1,0 +1,83 @@
+<apex:page >
+    <Style>
+    @ charset "utf-8";
+        #navigationBar{
+        width:660px;
+        }
+        #navigationBar #holder{
+        height:64px;
+        border-bottom:1px solid #000;
+        width:630px;
+        padding-left:60px;
+        }
+        #navigationBar #holder ul {
+        list-style:none;
+        margin:0;
+        padding:0;
+        }
+        #navigationBar #holder ul li a {
+        text-decoration:none;
+        float:left;
+        margin-right:5px;
+        font-family:"Arial Black",Gadget,sans-serif;
+        color:#000;
+        border:1px solid #000;
+        border-bottom:none;
+        padding:20px;
+        width:75px;
+        text-align:center;
+        display:block;
+        background:#69F;
+        }
+         #navigationBar #holder ul li a:hover {
+        background:#F90;
+        color:#FFF;
+       text-shadow:1px 1px 1px #000;
+        }
+        #holder ul li a#onSelect{
+        background:#FFF;
+        color:#000;
+        border-bottom:1px solid #FFF;
+        }
+       #holder ul li a#onSelect:hover{
+        background:#FFF;
+        color:#69F;
+        text-shadow:1px 1px 1px #000;
+        }
+     	
+    </Style>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset = utf-8" />
+        </head>
+        <body>
+            <div id="navigationBar">
+                <div id="holder">
+                    <ul>
+                        <li><a href="{!$Resource.patienthtml}" id="onSelect">Patient</a></li>
+                         <li><a href="#home" >Patient1</a></li>
+                         <li><a href="#home2" >Patient2</a></li>
+                         <li><a href="#home3">Patient3</a></li>
+                         <li><a href="#home4">Patient4</a></li>
+                        
+                        <li><a href="prescription.html" >Prescription</a></li>
+                        <li><a href="revisit.html" >Revisit</a></li>
+                    </ul>
+                    <div id ="home">
+                    <p> asdasd</p>
+                </div>
+                <div id ="home2">
+                    <p> two</p>
+                </div>
+                <div id ="home3">
+                    <p> 33333333333</p>
+                </div>
+                <div id ="home4">
+                    <p> sf88778767</p>
+                </div>
+                </div>
+
+            </div> <!--end of Navigation Bar -->
+        </body>
+    </html>
+</apex:page>

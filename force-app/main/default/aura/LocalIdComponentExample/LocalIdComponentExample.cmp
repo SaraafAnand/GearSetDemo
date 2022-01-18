@@ -1,0 +1,20 @@
+<aura:component>
+    <div class="slds-m-around_small">
+        <h1>Component Id Example</h1>
+        <lightning:input class="slds-m-around_small" label="IdAtSinglePlace" aura:id="idUsedHereOnly"></lightning:input>
+        <lightning:input class="slds-m-around_small" label="IdAtMultiplePlace" aura:id="idUsedAtMultiplePlace"></lightning:input>
+        <lightning:input class="slds-m-around_small" label="IdAtMultiplePlace" aura:id="idUsedAtMultiplePlace"></lightning:input>
+        <div class="slds-m-around_small">
+         <lightning:button onclick="{!c.checkId}" label="Check Id"></lightning:button>
+        </div>
+        <p class="slds-m-around_small">
+         <lightning:formattedText  value="Click on Check Id button" aura:id="resultBlock"></lightning:formattedText>
+        </p>
+        <div class="slds-m-around_small">
+         <lightning:formattedText  value="Single Component Result" aura:id="singleResult"></lightning:formattedText>
+        </div>
+        <div class="slds-m-around_small">
+            <lightning:formattedText  value="Multiple Component Result" aura:id="multipleResult"></lightning:formattedText>
+        </div>
+        </div>
+</aura:component>

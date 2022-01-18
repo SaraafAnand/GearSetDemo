@@ -1,0 +1,36 @@
+<!--* Author:S.Anand
+ 	* Version:40.0
+ 	* Requirement:write SOQL query to display Account,Task,Opportunity,case,event records in VF pages
+ 	* CreatedDate:03/10/2017 -->
+<apex:page controller="AccountChildDisplay">
+       <apex:pageBlock title="AccountInfo" >
+        <apex:pageBlockTable value="{!accounts}" var="a" rendered="{!(accounts.size != 0)}" >
+            <apex:column headerValue="Name" value="{!a.Name}"/>
+            <apex:column headerValue="Id" value="{!a.Id}"/>
+            <apex:column headerClass="Industry" value="{!a.Industry}"/>
+        </apex:pageBlockTable>
+         </apex:pageBlock>  
+         <apex:pageBlock >  
+        <apex:pageBlockTable value="{!OpportunityList}" var="a">
+            <apex:column headerValue="StageName" value="{!a.StageName}"/>
+            <apex:column headerValue="Id" value="{!a.Id}"/>
+            <apex:column headerValue="CloseDate" value="{!a.CloseDate}"/>
+       </apex:pageBlockTable> 
+             
+    </apex:pageBlock>
+        <apex:pageBlock title="Case,Event and Task List">
+            <apex:pageBlockTable value="{!tasks}" var="a">
+                <apex:column headerValue="Id" value="{!a.Id}"/>
+                 <apex:column headerValue="Status" value="{!a.status}"/>
+            </apex:pageBlockTable>
+            <apex:pageBlockTable title="Case" value="{!caseList}" var="a">
+                <apex:column headerValue="Id" value="{!a.Id}"/>
+                 <apex:column headerValue="Status" value="{!a.status}"/>
+            </apex:pageBlockTable>
+                <apex:pageBlockTable title="events" value="{!events}" var="a">
+                <apex:column headerValue="Id" value="{!a.Id}"/>
+                 <apex:column headerValue="Subject" value="{!a.subject}"/>
+                    <apex:column headerValue="Type" value="{!a.type}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+</apex:page>

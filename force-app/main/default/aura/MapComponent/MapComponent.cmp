@@ -1,0 +1,7 @@
+<aura:component controller="LightiningMap">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" ></aura:handler>
+    <aura:attribute name="myMap" Type="Map"/>
+    <li>Map Key 1 Value is:{!v.myMap.key1}</li>
+    <li>Map Key 2 Value is:{!v.myMap.key2}</li>
+    <li>Map Key 3 Value is:{!v.myMap.key3}</li>
+</aura:component>

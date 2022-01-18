@@ -1,0 +1,25 @@
+<apex:page sidebar="false" controller="BooleanExpression" >
+   
+  <apex:pageBlock title="Account" >
+    <apex:form >
+  <apex:commandButton value="Google" action="{!getshow}"/>
+
+      <table id="table">
+          
+    <tr>
+        <th>LastName</th>
+        <th>Phone</th>
+    </tr>
+    <apex:repeat value="{!conList}" var="con" rows="{!x}" id="demo">       
+    <tr id="row1">
+        <td>con.LastName</td>
+        <td>con.Phone</td>
+    </tr>
+    </apex:repeat>    
+ </table>
+
+      </apex:form>
+     
+
+    </apex:pageBlock>
+</apex:page>

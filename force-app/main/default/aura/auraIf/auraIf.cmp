@@ -1,0 +1,28 @@
+<aura:component >
+    <aura:attribute name="oneTrue" type="Boolean" default="true"/>
+    <aura:attribute name="twoFalse" type="Boolean" default="false"/>
+    <aura:attribute name="threeTrue" type="Boolean" default="true"/>
+    <aura:attribute name="fourFalse" type="Boolean" default="false"/>
+    <aura:if isTrue="{!or(v.oneTrue,v.twoFalse)}">
+        <div style="padding:15px;background-color:LightBlue">
+            I am true for or condition
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!or(v.fourFalse,v.twoFalse)}">
+        <div style="padding:15px;background-color:LightBlue">
+            I am false for AND condition
+        </div>
+    <aura:set attribute="else">
+        <div style="padding:15px;background-color:LightYellow">
+            I am else for AND condition
+        </div>
+        </aura:set>
+        
+    </aura:if>
+    <aura:if isTrue="{!or(and(v.fourFalse,v.twoFalse),v.oneTrue)}">
+          <div style="padding:15px;background-color:LightGreen">
+            I am Nested True for AND condition
+        </div>
+        </aura:if>
+    
+</aura:component>

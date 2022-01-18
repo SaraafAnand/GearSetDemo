@@ -1,0 +1,11 @@
+<apex:page showHeader="false" sidebar="false" controller="Pdfimage" cache="false" standardstylesheets="false" renderAs="pdf" applyHtmlTag="true">
+    <html>
+         <table>
+                <tr>
+                  <td colspan="8">         
+                    <apex:image value="{!imageUrl}"/>
+                  </td>
+                </tr>
+          </table>
+      </html>
+</apex:page>

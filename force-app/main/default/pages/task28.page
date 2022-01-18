@@ -1,0 +1,53 @@
+<apex:page standardcontroller="Opportunity" extensions="task28class" showHeader="false" sidebar="false">
+  <apex:form >
+     <apex:pageblock Title="Opportunity form">
+        <apex:pageblocksection >
+              <apex:inputfield value="{!oppor.Name}"></apex:inputfield>
+              <apex:inputfield value="{!oppor.closedate}"></apex:inputfield>
+              <apex:inputfield value="{!oppor.StageName}"> </apex:inputfield>
+        </apex:pageblocksection>
+      </apex:pageblock>
+         <apex:pageblock id="pb2">
+           <apex:pageblocktable value="{!addingrow}" var="ar">
+               <apex:variable var="index" value="{!0}"/>
+               <apex:column >
+                   <apex:facet name="header">Sl.No</apex:facet>
+                          {!index}
+                 <!--  <apex:variable value="{!index+1}" var="index"/> -->
+               </apex:column> 
+               <apex:column >
+                    <apex:facet name="header">Product Name</apex:facet>
+                    <apex:inputText value="{!ar.Name}"/>
+                 </apex:column>       
+                 <apex:column >
+                   <apex:facet name="header">List Price</apex:facet>
+                   <apex:inputText value="{!ar.listprice}" />  
+                     <apex:actionsupport event="onclick" action="{!listpricefunction}"/>
+                 </apex:column>
+                 <apex:column >
+                     <apex:facet name="header">Quantity</apex:facet>
+                     <apex:inputText value="{!ar.quantity}"/>  
+               </apex:column>     
+               <apex:column >
+                 <apex:facet name="header">Total</apex:facet>
+                  <apex:inputText value="{!ar.totalprice}"/> 
+                   <apex:actionsupport event="onclick" action="{!listpricefunction}"/>
+               </apex:column>
+               <apex:column >
+                  <apex:facet name="header">Action</apex:facet>
+                  <apex:commandButton value="Add" action="{!addrow}"/>
+               </apex:column>
+               <apex:column >
+                <apex:facet name="header">Action</apex:facet>
+                   <apex:commandbutton value="Delete" action="{!deleterow}" rerender="pb2">
+                     <apex:param name="Allocation" value="{!FLOOR(index)}" assignTo="{!rowindex}"/>
+                   </apex:commandbutton> 
+                <apex:variable value="{!index+1}" var="index"/>
+               </apex:column>  
+          </apex:pageblocktable>       
+          <apex:pageBlockButtons location="bottom">
+         <apex:commandButton value="save" action="{!Save}"/>
+         </apex:pageBlockButtons>
+     </apex:pageblock>
+ </apex:form>
+</apex:page>

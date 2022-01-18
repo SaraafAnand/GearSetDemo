@@ -1,0 +1,29 @@
+.THIS.Bar{
+    background-color :#f3f2f2;
+    height: 15% !important;
+}
+
+.THIS.hide {
+    display: none;
+}
+
+.THIS.btn {
+    margin-bottom: 10px;
+}
+
+.THIS label.uiLabel {
+    padding-right: 12px;
+}
+
+.THIS .field{
+    padding: 5px;
+    border: 1px solid #dce4ec;
+    border-radius: 2px;
+}
+.THIS .c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+}
+.THIS .buttonmargin{
+   margin : 5% 5% 5% 5% !important;
+}

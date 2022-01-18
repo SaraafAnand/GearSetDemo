@@ -1,0 +1,9 @@
+<apex:page controller="AccountChildDisplay">
+    <apex:pageBlock >
+         <apex:pageBlockTable value="{!accounts}" var="a"  >
+            <apex:column headerValue="Name" value="{!a.Name}"/>
+            <apex:column headerValue="Id" value="{!a.Id}"/>
+            <apex:column headerValue="Industry" value="{!a.Industry}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

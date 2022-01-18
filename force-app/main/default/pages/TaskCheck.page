@@ -1,0 +1,36 @@
+<apex:page controller="TaskCheck" id="page">
+    <script>
+    function getRow(Id){
+     var row=Id.split(":");
+        document.getElementById("page:fm:hid").value=row[4];
+        fun();
+        
+    }
+    </script>
+    <apex:form id="fm">
+        <apex:actionFunction name="fun" action="{!getDetails}" reRender="pbt"/>
+        <apex:inputHidden value="{!rowNo}" id="hid" />
+          	<apex:pageBlock id="pb">
+            <apex:commandButton value="add" action="{!add}" reRender="pbt" />
+            <apex:pageBlockTable id="pbt" value="{!tcw}" var="a">
+				<apex:variable var="index" value="{!0}"/>
+                <apex:column headerValue="sNo" >
+                    {!index}
+                 <apex:variable value="{!index+1}" var="index"/>
+                </apex:column>
+                <apex:column headerValue="ProductName" >
+                    <apex:inputText value="{!a.prodname}" id="name" onchange="getRow(this.id)"/>
+                </apex:column>
+                <apex:column headerValue="Quantity" >
+                    <apex:inputText value="{!a.Quantity}" id="Qt" />
+                </apex:column>
+                <apex:column headerValue="Price" >
+                    <apex:inputText value="{!a.price}" id="pe" />
+                </apex:column>
+                <apex:column headerValue="Total" >
+                    <apex:inputText value="{!a.total}" id="Tl" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

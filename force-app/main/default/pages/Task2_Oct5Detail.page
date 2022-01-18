@@ -1,0 +1,26 @@
+<apex:page controller="Task2_oct5" action="{!get}" >
+    <Script>
+        function openpopup(id){
+        var url='{!$Page.get}?id=' +id;
+ var newwin=window.open(url, 'popup','height=600,width=600,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
+  }
+    </Script>
+    <apex:form id="fm" >
+        Entername:<apex:inputText value="{!selectedname}"/>&nbsp;&nbsp;&nbsp;
+        Enterphone:<apex:inputText value="{!selectedphone}"/>&nbsp;&nbsp;&nbsp;
+        Enterindustry:<apex:inputText value="{!selectedIndustry}"/>&nbsp;&nbsp;&nbsp;
+        <apex:commandButton id="cb" value="search" action="{!search}"/>
+        	<apex:pageBlock id="pb" title="AccountDetails">
+            	<apex:pageBlockTable id="pbt" value="{!awList}" var="a" >
+                    <apex:column id="c" headerValue="Action">
+                        <apex:facet name="header">
+                        </apex:facet>
+                        	<apex:inputCheckbox id="cb" onclick="return openpopup('{!a.id}')"/>
+                    </apex:column>
+                    <apex:column id="cName" headerValue="Name" value="{!a.Name}"/>
+                    <apex:column id="cPhone" headerValue="phone" value="{!a.phone}"/>
+                    <apex:column id="cIndustry" headerValue="Industry" value="{!a.Industry}"/>
+                </apex:pageBlockTable>
+        	</apex:pageBlock>
+    </apex:form>
+</apex:page>

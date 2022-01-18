@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- SkillSet --></label>
+        <name>SkillSet__c</name>
+        <picklistValues>
+            <masterLabel>Agile</masterLabel>
+            <translation><!-- Agile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asp.Net</masterLabel>
+            <translation><!-- Asp.Net --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catia</masterLabel>
+            <translation><!-- Catia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CoreJava</masterLabel>
+            <translation><!-- CoreJava --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Css</masterLabel>
+            <translation><!-- Css --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Html</masterLabel>
+            <translation><!-- Html --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JavaScript</masterLabel>
+            <translation><!-- JavaScript --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jquery</masterLabel>
+            <translation><!-- Jquery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDLC</masterLabel>
+            <translation><!-- SDLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SolidWorks</masterLabel>
+            <translation><!-- SolidWorks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unigraphics</masterLabel>
+            <translation><!-- Unigraphics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vb.Net</masterLabel>
+            <translation><!-- Vb.Net --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WaterFall</masterLabel>
+            <translation><!-- WaterFall --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

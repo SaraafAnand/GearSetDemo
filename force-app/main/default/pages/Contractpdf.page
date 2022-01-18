@@ -1,0 +1,86 @@
+<!--  
+    Author: Ram
+    page: Sample Contract PDF Page
+ -->
+ 
+<apex:page controller="ContractPDF" showHeader="false" contentType="application/pdf#contract.pdf" renderas="pdf"> 
+<!--	<apex:stylesheet value="{!URLFOR($Resource.qstyle, 'qstyles.css')}"/> --> 
+<!-- <apex:page controller="ContractPDF" showHeader="false" contentType="application/msWord#contract.doc" cache="true">  -->  
+	
+	<apex:panelGrid columns="1" styleClass="companyTable" width="100%">
+    	<!-- 
+	    	<apex:outputText value="{!$Organization.Name}" styleClass="companyName"/>
+	        <apex:outputText value="{!$Organization.Street}"/>
+	        <apex:outputText value="{!$Organization.City}, {!$Organization.State} {!$Organization.PostalCode}"/>
+	        <apex:outputText value="{!$Organization.Phone}"/>
+         -->
+         
+        <!-- c.BillingStreet, c.BillingState, c.BillingPostalCode, c.BillingCountry, c.BillingCity  
+        <apex:outputText value="Client:"/> -->
+        <apex:outputField value="{!mycontract.AccountId}"/>     
+    	<apex:outputField value="{!mycontract.BillingStreet}"/>
+    	<apex:outputField value="{!mycontract.BillingState}"/>
+    	<apex:outputField value="{!mycontract.BillingCity}"/>
+    	<apex:outputField value="{!mycontract.BillingPostalCode}"/>
+		<apex:outputField value="{!mycontract.BillingCountry}"/>
+		<p>Start Date: {!MONTH(mycontract.StartDate)}/{!DAY(mycontract.StartDate)}/{!YEAR(mycontract.StartDate)} </p>
+		<!-- <apex:outputField value="{!mycontract.StartDate}"/>  -->
+		<br/>
+		<div>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt mauris et ipsum ultricies pellentesque. Nullam aliquam tempor turpis, eleifend sagittis velit fermentum eu. Mauris eu lorem urna. Pellentesque ultricies feugiat nunc a gravida. Ut non metus mauris. Donec in tempus nisl. Proin nec urna sed mauris interdum adipiscing sit amet et turpis. Donec venenatis, neque quis vestibulum luctus, tortor orci dictum lorem, vel bibendum libero sapien non mauris. Duis bibendum dolor sed tortor porttitor a mollis quam scelerisque. Donec at erat arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vel enim orci, quis sodales dolor. 
+			</p>
+		</div>
+		<br/>
+		<div>
+			<table width="800">
+				<tbody>
+					<tr>
+						<td width="25%" height="20" style="color:white">CustSignInsert</td>
+						<td width="25%" height="20"/>
+						<td width="25%" height="20" style="color:white">SellSignInsert</td>
+						<td width="25%" height="20"/>
+					</tr>
+					<tr>
+						<td width="25%" height="20">---------------------------</td>
+						<td width="25%" height="20"/>
+						<td width="25%" height="20">---------------------------</td>
+						<td width="25%" height="20"/>
+					</tr>
+					<tr>
+						<td width="25%" height="20">Customer Signature</td>
+						<td width="25%" height="20"/>
+						<td width="25%" height="20">Seller Signature</td>
+						<td width="25%" height="20"/>
+					</tr>
+					<tr>
+						<td width="25%" height="30" style="color:white">CustTitle</td>
+						<td width="25%" height="30"/>
+						<td width="25%" height="30" style="color:white">SellerTitle</td>
+						<td width="25%" height="30"/>
+					</tr>
+					<tr>
+						<td width="25%" height="20">---------------------------</td>
+						<td width="25%" height="20"/>
+						<td width="25%" height="20">---------------------------</td>
+						<td width="25%" height="20"/>
+					</tr>
+					<tr>
+						<td width="25%" height="20">Customer Title</td>
+						<td width="25%" height="20"/>
+						<td width="25%" height="20">Seller Title</td>
+						<td width="25%" height="20"/>
+					</tr>
+					<tr/>
+					<tr>
+						<td width="25%" height="50" >Date: <span style="color:white">CustDate</span></td>
+						<td width="25%" height="50" />
+						<td width="25%" height="50" >Date <span style="color:white">SellDate</span></td>
+						<td width="25%" height="50" />
+					</tr>
+				</tbody>
+			</table>
+		</div>
+    </apex:panelGrid>
+	
+</apex:page>

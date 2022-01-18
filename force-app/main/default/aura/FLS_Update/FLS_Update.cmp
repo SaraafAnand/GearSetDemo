@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:layout multipleRows="true">
+	<lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="4" padding="horizontal-small">
+		<div class="custom-box">1</div>
+	</lightning:layoutItem>
+	<lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="4" padding="horizontal-small">
+		<div class="custom-box">2</div>
+	</lightning:layoutItem>
+	<lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="4" padding="horizontal-small">
+		<div class="custom-box">3</div>
+	</lightning:layoutItem>
+</lightning:layout>
+</aura:component>

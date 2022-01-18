@@ -1,0 +1,143 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+  <div class="demo-only slds-p-left_large" style="width:440px">
+  <div class="slds-form slds-form_compound">
+    <fieldset class="slds-form-element">
+      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Details</legend>
+      <div class="slds-form-element__group">
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-01">First Name</label>
+            <input type="text" id="input-01" class="slds-input" />
+          </div>
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-02">Last Name</label>
+            <input type="text" id="input-02" class="slds-input" />
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="slds-form-element">
+      <legend class="slds-form-element__label slds-text-title_caps">Address</legend>
+	   <c:AutoCompleteAdress/>
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-04">City</label>
+            <input type="text" id="input-04" class="slds-input" />
+          </div>
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-05">State</label>
+            <input type="text" id="input-05" class="slds-input" />
+          </div>
+        </div>
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-06">ZiP Code</label>
+            <input type="text" id="input-06" class="slds-input" />
+          </div>
+        </div>
+		<div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-06">phone</label>
+            <input type="text" id="input-06" class="slds-input" />
+          </div>
+        </div>
+        <div class="slds-align_absolute-center">
+     <lightning:button variant="brand"
+                          label="Create New Shipping Address"
+                          title="Create New Shipping Address"
+                          onclick="{! c.openModel }" />
+</div>
+   </fieldset>
+  </div>
+ 
+        <!--Use aura:if tag to display Model Box, on the bese of conditions. [isOpen boolean attribute] -->   
+        <aura:if isTrue="{!v.isOpen}">
+            
+            <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- ###### MODAL BOX HEADER Start ######-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add New Address</h2>
+                    </header>
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        
+  <div class="slds-form slds-form_compound">
+    <fieldset class="slds-form-element">
+      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Details</legend>
+      <div class="slds-form-element__group">
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-01">First Name</label>
+            <input type="text" id="input-01" class="slds-input" />
+          </div>
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-02">Last Name</label>
+            <input type="text" id="input-02" class="slds-input" />
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="slds-form-element">
+      <legend class="slds-form-element__label slds-text-title_caps">Address</legend>
+	   <c:AutoCompleteAdress/>
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-04">City</label>
+            <input type="text" id="input-04" class="slds-input" />
+          </div>
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-05">State</label>
+            <input type="text" id="input-05" class="slds-input" />
+          </div>
+        </div>
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-06">ZiP Code</label>
+            <input type="text" id="input-06" class="slds-input" />
+          </div>
+        </div>
+		<div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-06">phone</label>
+            <input type="text" id="input-06" class="slds-input" />
+          </div>
+        </div>
+        <div class="slds-align_absolute-center">
+     <lightning:button variant="brand"
+                          label="Create New Shipping Address"
+                          title="Create New Shipping Address"
+                          onclick="{! c.openModel }" />
+</div>
+   </fieldset>
+  </div>
+                        
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand" 
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{! c.likenClose }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+            
+        </aura:if>
+  
+       
+</div>	
+</aura:component>

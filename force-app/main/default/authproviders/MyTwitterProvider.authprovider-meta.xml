@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <consumerKey>Oz8gFX1D23JzdFbkyOfAhynDv</consumerKey>
+    <consumerSecret>khnZuGL/m3+TvFRHkXFGeZb8Np0YjZr8+i8c9VPsGg5Q0yG/c1eTPLQw3BCy2eu/B73R8By/e7U=</consumerSecret>
+    <executionUser>anandov@gmail.com</executionUser>
+    <friendlyName>MyTwitterProvider</friendlyName>
+    <iconUrl>https://login.salesforce.com/icons/twitter-black.png</iconUrl>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>Twitter</providerType>
+    <registrationHandler>MyTwitterRegHandler</registrationHandler>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+</AuthProvider>

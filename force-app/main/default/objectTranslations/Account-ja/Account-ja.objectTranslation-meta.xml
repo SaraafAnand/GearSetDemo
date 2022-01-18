@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>CPQ Account Layout</layout>
+        <sections>
+            <label>追加情報</label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label>カスタムリンク</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>更新/期間調整情報</label>
+            <section>Renewal/Co-Term Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Get NAme --></label>
+        <name>Get_NAme</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Offer Feedback --></label>
+        <name>LDS</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LDSTest --></label>
+        <name>LDSTest</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NareshLight --></label>
+        <name>NareshLight</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Legal --></label>
+        <name>Legal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Non Legal --></label>
+        <name>Non_Legal</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Billing --></label>
+        <name>Billing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Naresh --></label>
+        <name>Naresh</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- QuickQuote --></label>
+        <name>QuickQuote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Url_Hack --></label>
+        <name>Url_Hack</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- clone --></label>
+        <name>clone</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- clone2 --></label>
+        <name>clone2</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- cloneOp --></label>
+        <name>cloneOp</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- contacts --></label>
+        <name>contacts</name>
+    </webLinks>
+</CustomObjectTranslation>

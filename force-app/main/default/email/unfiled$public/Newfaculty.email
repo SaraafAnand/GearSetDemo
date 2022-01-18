@@ -1,0 +1,7 @@
+Dear  {!Faculty__c.LastName__c},                                                                                                          
+
+Thank you for showing interest to work with us ,Our coordinator will contact you Within next 2 working days.                                                                                            
+
+your area of Interest is {!Faculty__c.Skills__c}
+
+Thanks                                                                                                                                 Capital Info solution!

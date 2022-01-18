@@ -1,0 +1,21 @@
+<apex:page standardController="Opportunity" recordSetVar="opplist" showHeader="true" extensions="updateoppclass">
+    <apex:pageMessages />
+    <apex:form >
+        <apex:inputText value="{!fldValue }"></apex:inputText>
+        <apex:pageBlock title="Step 1 - list of opportunities">
+            <apex:pageBlockTable value="{!opplist}" var="a1">
+                <apex:column value="{!a1.Name}"/>
+                <apex:column value="{!a1.stagename}"/>
+                <apex:column value="{!a1.Amount}"/>
+                <apex:column value="{!a1.CloseDate}"/>
+                <apex:column value="{!a1.probability}"/>
+                <apex:column value="{!a1.Account.name}"/>
+             </apex:pageBlockTable>
+            	
+            <apex:pageblockbuttons >
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+                <apex:commandButton value="next" action="{!gotoVF}"/>
+            </apex:pageblockbuttons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

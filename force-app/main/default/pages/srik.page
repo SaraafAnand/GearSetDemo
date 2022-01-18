@@ -1,0 +1,25 @@
+<apex:page >
+    <apex:Sectionheader title="Dialmer" ></apex:Sectionheader>
+    <table>
+        <tr width="100%">
+ 			<td width="50%" align="right">
+    	     <apex:outputText value="Dialmer Trucks North America"></apex:outputText>
+ 			<apex:outputText value="International Sales & Services"></apex:outputText>
+ 			
+            </td>
+ 			<td width="50%" align="right">
+     		     <apex:panelGrid columns="1" width="50%" >
+	            </apex:panelGrid>
+            </td>
+           </tr>
+    
+<apex:panelGrid >
+    
+    
+    </apex:panelGrid>
+
+</table>
+
+
+
+</apex:page>

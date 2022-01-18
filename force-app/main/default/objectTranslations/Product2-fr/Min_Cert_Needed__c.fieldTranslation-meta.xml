@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Min Cert Needed --></label>
+        <name>Min_Cert_Needed__c</name>
+        <picklistValues>
+            <masterLabel>Advanced Open Water</masterLabel>
+            <translation><!-- Advanced Open Water --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adventure</masterLabel>
+            <translation><!-- Adventure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Master</masterLabel>
+            <translation><!-- Master --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open Water</masterLabel>
+            <translation><!-- Open Water --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rescue</masterLabel>
+            <translation><!-- Rescue --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

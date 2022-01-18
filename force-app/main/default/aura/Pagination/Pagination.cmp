@@ -1,0 +1,118 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                controller='PaginationController'
+                access="global" >
+    
+    <!-- Attribute Declration For Pagination -->
+    <aura:attribute name="ContactData" type="Object"/>
+   
+     <aura:attribute name="isSending" type="boolean" />
+    
+    <!-- Attribute Declration For Pagination -->
+    <aura:attribute name="PaginationList" type="Account"/>
+    <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+    <aura:attribute name="pagenumber" type="Integer" />
+    <aura:attribute name="totalRecords" type="Integer"/>
+   
+    <aura:attribute name="total" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="10"/>
+    <!-- Attribute Declration For Pagination End-->
+    
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    
+    <!-- Spinner Start, show the loading screen while 
+		 Client side controller(JS) is communicating with Server Side(APEX) controller -->
+    <aura:if isTrue="{!v.isSending}">
+        <div class="slds-spinner_container">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <!-- Spinner End -->
+    
+    
+    <div class="slds-m-top_medium" style="width:100%;">
+       <table class="slds-table slds-table--bordered slds-table--fixed-layout slds-grow slds-wrap"   id="tab">
+  <thead>
+    <tr class="slds-text-title_caps">
+        <th scope="col">
+        <div class="slds-truncate" title="Account Name">Account Name</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Account Type">Account Type</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Account Number">Account Number</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Country">Country</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Stage">Stage</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="From Date">From Date</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="To Date">To Date</div>
+      </th>
+         <th scope="col">
+        <div class="slds-truncate" title="Description">Description</div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <aura:iteration items="{!v.PaginationList}" var="acc">
+    <tr>
+        <td data-label="Account Name">
+        <div class="slds-truncate" title="Cloudhub">{!acc.Name}</div>
+      </td>
+      <td data-label="Account Type">
+        <div class="slds-truncate" title="Cloudhub">{!acc.Industry}</div>
+      </td>
+      <td data-label="AccountNo__c">
+        <div class="slds-truncate" title="Cloudhub">{!acc.AccountNo__c}</div>
+      </td>
+      <td data-label="BillingCountry">
+        <div class="slds-truncate" title="BillingCountry">{!acc.BillingCountry}</div>
+      </td>
+      <td data-label="Prospecting">
+        <div class="slds-truncate" title="startDate__c">{!acc.startDate__c}</div>
+      </td>
+      <td data-label="endDate__c">
+        <div class="slds-truncate" title="endDate__c">{!acc.endDate__c}</div>
+      </td>
+      <td data-label="Description">
+        <div class="slds-cell-shrink" title="Description">{!acc.Description}</div>
+      </td>
+    </tr>
+   </aura:iteration> 
+  </tbody>
+</table>
+        <br/>
+        <lightning:buttonGroup class="slds-align_absolute-center">
+            <lightning:button label="First" disabled="{!v.startPage == 0}"  
+                              onclick="{!c.first}" variant="brand"
+                              iconName='utility:back'/>
+            &nbsp; &nbsp; &nbsp;
+            <lightning:button label="Previous" disabled="{!v.startPage == 0}"  
+                              onclick="{!c.previous}" variant="brand"
+                              iconName='utility:back'/>
+            &nbsp; &nbsp; &nbsp;
+            <div class="pgno" style="position:static; left:204px; top:433px;">
+                <p>{!v.pagenumber}/{!v.total} </p>
+            </div>
+             &nbsp; &nbsp; &nbsp;
+            <lightning:button label="Next" disabled="{!v.endPage >= v.totalRecords}" 
+                              onclick="{!c.next}" variant="brand"
+                              iconName='utility:forward' iconPosition='right'/>
+            &nbsp; &nbsp; &nbsp;
+            <lightning:button label="Last" disabled="{!v.endPage >= v.totalRecords}"  
+                              onclick="{!c.last}" variant="brand"
+                              iconName='utility:forward' iconPosition='right'/>
+        </lightning:buttonGroup>
+    </div>
+</aura:component>

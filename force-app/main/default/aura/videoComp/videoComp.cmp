@@ -1,0 +1,10 @@
+<aura:component implements="lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId" access="global" >
+	
+       <!-- <lightning:container aura:id="ReactApp"
+                         src="{!$Resource.Ev1}"
+                         onmessage=""/> -->
+  <iframe src="//fast.wistia.net/embed/iframe/avk9twrrbn" allowtransparency="true" frameborder="0" scrolling="no"  width="620" height="349"></iframe>
+
+    
+
+</aura:component>

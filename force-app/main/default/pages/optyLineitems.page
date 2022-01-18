@@ -1,0 +1,43 @@
+<apex:page Standardcontroller="Opportunity" extensions="OptyLineItems" id="page">
+    <script>	
+    	function getRow(myId){
+        	var rowIds=myId.split(':');
+            document.getElementById('page:fm:hid').value=rowIds[4];
+            fun();
+        }
+    	function calculate(myId){
+        	var rowIds=myId.split(':');
+            var quant=document.getElementById('page:fm:pb:pbt:'+rowIds[4]+':quant').value;
+            var price=document.getElementById('page:fm:pb:pbt:'+rowIds[4]+':price').value;
+            
+            	var total=parseInt(quant)*parseInt(price);
+            	document.getElementById('page:fm:pb:pbt:'+rowIds[4]+':total').value=total;
+            }
+    </script>
+    <apex:form id="fm">
+        <apex:actionFunction name="fun" action="{!getData}" reRender="pbt" />
+        <apex:inputHidden value="{!rowNo}" id="hid" />
+    	<apex:pageBlock title="OpportunityLineItem" id="pb">
+            <apex:variable var="index" value="{!0}" />
+        	<apex:pageBlockTable value="{!lineitems}" var="a" id="pbt">
+            	<apex:column headerValue="SNO">
+                	{!index}
+                    <apex:variable value="{!index+1}" var="index" />
+                </apex:column>
+                <apex:column headerValue="Product">
+                    <apex:inputText value="{!a.prodName}" id="name" onchange="getRow(this.id)" />
+                   
+                </apex:column>
+                   <apex:column headerValue="Quantity">
+                    <apex:inputText value="{!a.quant}" id="quant" onchange="calculate(this.id)"/>
+                </apex:column>
+                   <apex:column headerValue="UnitPrice">
+                    <apex:inputText value="{!a.price}" id="price" />
+                </apex:column>
+                   <apex:column headerValue="Total">
+                    <apex:inputText value="{!a.total}" id="total"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

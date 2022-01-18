@@ -1,0 +1,12 @@
+Dear {!Student__c.First_Name__c}, 
+
+Your registration process is completed with the following details.                                                
+
+First Name:{!Student__c.First_Name__c}  
+LastName :{!Student__c.Name} 
+DOB:{!Student__c.BirthDate__c}                      
+
+
+Thanks                                                                
+Capital Info Solutions
+Hyd

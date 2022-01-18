@@ -1,0 +1,20 @@
+<aura:component controller="LightningDataTableController" 
+                implements="force:hasRecordId,flexipage:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List" default="[{label: 'Name', fieldName: 'LinkName', type: 'url', typeAttributes: {label: { fieldName: 'Name' }, target: '_blank'}},
+            {label: 'Email', fieldName: 'Email', type: 'text'},
+            {label: 'Phone', fieldName: 'Phone', type: 'text'}]"/>
+    <aura:attribute name="recordId" type="String" default="" />
+    <!-- the container element determine the height of the datatable -->
+    <lightning:card aura:id="lightCard" class="slds-card_boundary" title="{!'Contacts ('+v.data.length+')'}" iconName="standard:contact">    
+    <div style="overflow-x: auto;">
+        <lightning:datatable style="height: 90% !important;display: block;"
+                             aura:id="contacts"
+                             columns="{!v.columns}"
+                             data="{!v.data}"
+                             keyField="id"
+        />        
+    </div>
+        </lightning:card>
+</aura:component>

@@ -1,0 +1,12 @@
+<apex:page controller="metaData" >
+     <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="3">
+                <apex:inputFile value="{!blobCsv}" fileName="{!stringCsv}"  />
+                <apex:commandButton value="Convert" action="{!convert_Accountobj}"/>
+               
+            </apex:pageBlockSection>
+            <!-- Displaying the list of account records that are created from the csv file --->
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

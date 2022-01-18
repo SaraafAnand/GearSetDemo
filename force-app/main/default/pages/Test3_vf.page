@@ -1,0 +1,35 @@
+<apex:page Controller="Account_Repeat">
+    <Style>
+        table{
+        	font-family:arial,sans-serif;
+        	border-collapase:collapse;
+        	width:100%;
+        }
+        tr.Header row{
+           font-family:Arial;
+           font-color:blue;
+        }
+         tr.dataRow { 
+                       background-color:white; 
+                    }
+                    tr:nth-child(even) {background-color: #f2f2f2}                   
+                     };
+    </Style>
+	<table class="table">
+        <tr class="Header row">
+            <th Class="Heading">Name</th>
+            <th Class="Heading">Indusrty</th>
+            <th Class="Heading">Phone</th>
+            <th Class="Heading">Rating</th>
+        </tr>
+        <apex:repeat value="{!acc}" var="a">
+            <tr class="Header row">
+            	<td class="Data row">{!a.name}</td>
+            	<td class="Data row">{!a.phone}</td>
+                <td class="Data row">{!a.Industry}</td>
+                <td class="Data row">{!a.rating}</td>
+        	</tr>
+        </apex:repeat>
+        
+    </table>  
+</apex:page>

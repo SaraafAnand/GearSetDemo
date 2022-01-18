@@ -1,0 +1,154 @@
+<!--*Author:S.Anand
+* Version:1
+* Requirement:create a Quick based on account and contact
+* CreatedDate:08/11/2017
+-->
+<apex:page controller="quickQuote_Tab" sidebar="false" id="page">
+    <script>
+    function getRow(myId){
+        alert(myId);
+        var row=myId.split(":");
+        alert(row[4]);
+        document.getElementById("page:fm:hid1").value=row[4];
+        fun1();
+    }
+    function del(Id){
+       
+        var rowno=Id.split(":");
+        alert(rowno[4]);
+        var row=rowno[4];
+        document.getElementById("page:fm:hidden").value=row;
+        fun1();
+    }
+	function add(Id){
+        var rowno=Id.split(":");
+        alert(rowno[4]);
+        var row=rowno[4];
+        document.getElementById("page:fm:hidden1").value=row;
+        fun2();
+        
+    }    
+    function cal(Id){
+          alert(Id);
+        var rowno=Id.split(":");
+        alert(rowno[4]);
+        // retreive values of salesprice,unitprice,quantity,total,subtotal,discount 
+    var disc=document.getElementById("page:fm:pb:pbt:"+rowno[4]+":disc").value;
+        alert(disc);    
+    var up=document.getElementById("page:fm:pb:pbt:"+rowno[4]+":unit").value;
+        // alert('unitprice'+up);
+        var quant=document.getElementById("page:fm:pb:pbt:"+rowno[4]+':quant').value;
+        // alert('quant'+quant);
+        var x=1.10;
+        var sp1=parseInt(up)*parseFloat(x);
+        document.getElementById("page:fm:pb:pbt:"+rowno[4]+":sales").value=sp1;
+        //   alert('salesprice'+sp1);
+        var subtot=parseInt(sp1)*parseInt(quant);
+        
+        alert('subtotal:'+subtot);
+        var p=parseFloat(disc/100);
+       var y=parseFloat(1-p);
+        var tot=parseInt(disc)*parseInt(subtot)*parseFloat(y);
+        alert('TotalPrice:'+tot);
+        document.getElementById("page:fm:pb:pbt:"+rowno[4]+":stotal").value=subtot;
+        document.getElementById("page:fm:pb:pbt:"+rowno[4]+":Tot1").value=tot;
+    }
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      var j$ = jQuery.noConflict();
+    alert('Success');
+  j$( function() {
+    var availableTags = [];
+      //use the <!-- <apex:repeat> -->tag to iterate through the list returned from the class and store only the names in the javascript variable.
+        <apex:repeat value="{!autopopulateList}" var="accList">
+            apexAccountList.push('{!accList.name}');//Store the name of the account in the array variable.
+        </apex:repeat>
+    j$( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>   
+    <apex:form id="fm">
+        <apex:actionFunction name="fun2" action="{!add}"/>
+        <apex:inputHidden value="{!rowAdd}" id="hidden1"/>
+        <apex:actionFunction name="fun1" action="{!del}"/>
+        <apex:inputHidden value="{!rowDel}" id="hidden"/>
+        <apex:actionFunction name="fun" action="{!getDetails}" rerender="pbt"/>
+        <apex:actionFunction name="fun1" action="{!getDetails}" rerender="pbt"/>
+        <apex:inputHidden value="{!rowNo}" id="hid1"/>
+        <div align="center">
+            <apex:commandButton value="Save" action="{!save}"/>
+        </div>   
+        <apex:pageBlock tabStyle="Account" id="pb1">
+            <apex:pageBlockSection title="AccountInformation">
+                <apex:pageBlockSectionItem id="pbs">
+                    <apex:outputLabel value="Name" />
+                    <apex:inputText value="{!selectedAccountName}" id="tags" >
+                        <apex:actionSupport event="onchange" action="{!autoPopulate}" />
+                    </apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Industry" />
+                    <apex:inputText value="{!selectedIndustry}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="contactInformation">
+                <apex:pageBlockSectionItem id="pbs">
+                    <apex:outputLabel value="LastName" />
+                    <apex:inputText value="{!selectedLastName}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Email" />
+                    <apex:inputText value="{!selectedEmail}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSection title="Quote">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="QuoteName" />
+                        <apex:inputText value="{!quoteName}" />
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:inputHidden value="{!rowNo}" id="hid"/>
+        <apex:pageBlock Title="QuoteLineItems" id="pb" tabStyle="Account">
+            <apex:variable value="{!1}" var="index"/>
+            <apex:pageBlockTable value="{!quoteList}" var="a" id="pbt">
+                <apex:column headerValue="Sno">
+                    {!index}
+                    <apex:variable value="{!index+1}" var="index"/>
+                </apex:column>
+                <apex:column headerValue="Product">
+                    <apex:inputText value="{!a.prod}" id="pr" onchange="getRow(this.id)"/>
+                </apex:column>
+                <apex:column headerValue="Quantity">
+                    <apex:inputText value="{!a.quant}" id="quant"/>
+                </apex:column>
+                <apex:column headerValue="UnitPrice">
+                    <apex:inputText value="{!a.unitPrice}" id="unit"/>
+                </apex:column>
+                <apex:column headerValue="SalesPrice">
+                    <apex:inputText value="{!a.SalesPrice}" id="sales"/>
+                </apex:column>
+                <apex:column headerValue="SubTotal">
+                    <apex:inputText value="{!a.subTotal}" id="stotal"/>
+                </apex:column>
+                <apex:column headerValue="Total">
+                    <apex:inputText value="{!a.total}" id="Tot1"/>
+                </apex:column>
+                <apex:column headerValue="Discount">
+                    <apex:inputText value="{!a.disc}" id="disc"/>
+                </apex:column>
+                <apex:column headerValue="Action">
+                    <apex:commandButton value="Add" onclick="add(this.id)" reRender="pbt" />
+                </apex:column>
+                <apex:column >
+                    <apex:commandButton value="Del" id="del" onclick="del(this.id)" reRender="pbt"/>
+                </apex:column>
+                <apex:column >
+                    <apex:commandButton value="checkout" id="cb" onclick="cal(this.id)"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

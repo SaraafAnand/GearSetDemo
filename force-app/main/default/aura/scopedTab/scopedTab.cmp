@@ -1,0 +1,31 @@
+<aura:component >
+	
+<div class="slds-tabs_scoped">
+  <ul class="slds-tabs_scoped__nav" role="tablist">
+    <li aura:id="fruits" class="slds-tabs_scoped__item slds-text-title--caps slds-active tab" title="Item One" role="presentation"><a class="slds-tabs_scoped__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-scoped-1" id="tab-scoped-1__item" onclick="{!c.clickedFruits}">Fruits</a></li>
+    <li aura:id="vegetables" class="slds-tabs_scoped__item slds-text-title--caps tab" title="Item Two" role="presentation"><a class="slds-tabs_scoped__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="true" aria-controls="tab-scoped-2" id="tab-scoped-2__item" onclick="{!c.clickedVegetables}">Vegetables</a></li>
+    <li aura:id="flowers" class="slds-tabs_scoped__item slds-text-title--caps tab" title="Item Three" role="presentation"><a class="slds-tabs_scoped__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-scoped-3" id="tab-scoped-3__item" onclick="{!c.clickedFlowers}">Flowers</a></li>
+  </ul>
+  <div aura:id="fruitsData" id="tab-scoped-1" class="slds-tabs_scoped__content slds-show tabData" role="tabpanel" aria-labelledby="tab-scoped-1__item">
+    <ul >
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Grapes</li>
+      </ul>
+    </div>
+  <div aura:id="vegetablesData" id="tab-scoped-2" class="slds-tabs_scoped__content slds-hide tabData" role="tabpanel" aria-labelledby="tab-scoped-2__item">
+    <ul >
+        <li>carrot</li>
+        <li>Brinjal</li>
+        <li>potatoe</li>
+      </ul>
+    </div>
+  <div aura:id="flowersData" id="tab-scoped-3" class="slds-tabs_scoped__content slds-hide tabData" role="tabpanel" aria-labelledby="tab-scoped-3__item">
+     <ul >
+        <li>Rose</li>
+        <li>Lilly</li>
+        <li>Jasmine</li>
+      </ul>
+    </div>
+</div>
+</aura:component>

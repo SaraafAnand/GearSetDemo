@@ -1,0 +1,45 @@
+<aura:component >
+    <aura:registerEvent name="addItem" type="c:addItemEvent"></aura:registerEvent>
+<Lightning:Layout >
+        <div >
+            <Lightning:layoutItem padding="around-small" size="12">
+                
+                <fieldSet class="slds-box slds-theme_default slds-container_small" >
+                    
+                    <legend class="slds-p-vertical_medium slds-text-heading_medium ">
+                        Camping Item
+                    </legend>
+                    <form class="slds-form slds-form_stacked">
+                        <lightning:input label="Name" aura:id="campingForm"
+                                         name="campingItemName"
+                                         value="{!V.newItem.Name}"
+                                         Required="True"    ></lightning:input>
+                        <lightning:input label="Quantity" aura:id="campingForm"
+                                         name="campingItemQuantity"
+                                         type="Number"
+                                         min="1"   
+                                         value="{!V.newItem.Quantity__c}"
+                                         ></lightning:input>
+                        <lightning:input label="price" aura:id="campingForm"
+                                         name="campingItemPrice"
+                                         value="{!V.newItem.Price__c}"
+                                         formatter="currency"    ></lightning:input>
+                        <lightning:input label="packed" aura:id="campingForm"
+                                         name="campingItemPacked"
+                                         type="checkbox"  
+                                         checked="{!V.newItem.Packed__c}"
+                                         ></lightning:input>
+                        <div class="slds-p-vertical_medium ">
+                            <lightning:button label="create" 
+                                              type="button"
+                                              class="slds-button_brand"
+                                              onclick="{!c.clickCreateItem}">
+                            </lightning:button>
+                        </div>
+                    </form>
+                </fieldSet>
+                
+            </Lightning:layoutItem>
+        </div>
+    </Lightning:Layout>	
+</aura:component>

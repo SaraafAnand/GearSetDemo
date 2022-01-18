@@ -1,0 +1,11 @@
+<apex:page controller="Facebook_Example">
+    <apex:form >
+        <apex:pageBlock title="Facebook">
+            Application Id :<Apex:inputText value="{!appId}" /> <br/><br/>
+            Application Secret:<apex:inputText value="{!appSecret}" /> <br/><br/>
+            <apeX:commandButton value="Token" action="{!requestToken}" />
+            <br/><br/>
+            {!result}
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

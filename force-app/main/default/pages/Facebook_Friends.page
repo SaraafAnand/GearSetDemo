@@ -1,0 +1,12 @@
+<apex:page controller="Facebook_Friends">
+    <apex:form >
+        <apex:pageBlock title="Facebook">
+            <apeX:commandButton value="Token" action="{!requestToken}" />
+            <apeX:commandButton value="User_Token" action="{!friendToken}" />
+            <br/><br/>
+            {!longtoken_result}
+            {!result}
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

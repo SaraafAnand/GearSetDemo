@@ -1,0 +1,15 @@
+<apex:page controller="AccessMapJS" >
+<script>
+// Access here resultsMap: get contact last name using contact id
+var contactMap = JSON.parse('{!JsonMap}');
+    alert(contactMap[lastname]);
+        var keyArr = Object.keys(contactMap);
+      var x = datajson[keyArr[0]];
+            alert (x);   
+    for ( var i = 0; i < keyArr.length; i++) {
+            var val = datajson[keyArr[i]];
+            alert (val);
+            }
+</script>
+  {!resultsMap}
+</apex:page>

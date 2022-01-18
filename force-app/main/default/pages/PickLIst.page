@@ -1,0 +1,28 @@
+<apex:page StandardController="Opportunity" extensions="PickList" >
+    <apex:form >
+        <apex:inputField value="{!Op.stageName}">
+       <apex:param name="removeProductCode" assignTo="{!selStage}" value="{!op.StageName}"/>
+        </apex:inputField>
+        
+        <apex:selectList value="{!SelectedMonth1}" multiselect="False" size="1">
+            <apex:selectOptions value="{!StartMonth}"/>
+        </apex:selectList>
+        <apex:selectList value="{!selectedYear1}" multiselect="False" size="1">
+            <apex:selectOptions value="{!startYear}"/>
+        </apex:selectList>
+        <apex:selectList value="{!SelectedMonth2}" multiselect="False" size="1">
+            <apex:selectOptions value="{!endMonth}"/>
+        </apex:selectList>
+        <apex:selectList value="{!selectedYear2}" multiselect="False" size="1">
+            <apex:selectOptions value="{!endYear}"/>
+        </apex:selectList>
+        <apex:commandButton value="Search" action="{!check}"/>
+        <apex:pageBlock >
+            <apex:messages ></apex:messages>
+            <apex:pageBlockTable value="{!accounts}" var="a">
+                <apex:column headerValue="ID" value="{!a.id}"/>
+                <apex:column headerValue="Name" value="{!a.Name}"/>             
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

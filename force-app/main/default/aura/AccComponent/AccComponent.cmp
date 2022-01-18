@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute type="Object" name="record"/>
+<aura:attribute name="accRecord" type="Object" />
+
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, Name, OwnerId"                       
+                      targetRecord="{!v.record}"            
+                      targetError="{!v.recordError}"
+                      targetFields="{!v.accRecord}"
+                      recordUpdated="{!c.doInit}"    />
+    
+    TESTING
+</aura:component>

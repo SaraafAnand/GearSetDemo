@@ -1,0 +1,24 @@
+<apex:page controller="Account_Formulalist" >
+    <apex:form >
+        <apex:pageBlock title="List of accounts">
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!cacc}" var="a">
+                    <apex:column headerValue="Name" value="{!a.Name}"/>
+                    <apex:column headerValue="Value" value="{!a.Value__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+Enter the formula<apex:inputtext value="{!selected}">
+                	<apex:actionSupport event="onchange" action="{!displayAccountList}" reRender="pbt"/>
+                </apex:inputtext>
+                 </apex:pageBlockSectionItem>    
+                <apex:pageBlockTable value="{!acc}" var="a" id="pbt">
+                    <apex:column headerValue="Name" value="{!a.Name}"/>
+                    <apex:column headerValue="Industry" value="{!a.Industry}"/>
+                    <apex:column headerValue="Rating" value="{!a.Rating}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

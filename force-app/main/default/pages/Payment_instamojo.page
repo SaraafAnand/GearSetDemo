@@ -1,0 +1,14 @@
+<!-- * Author : S.Anand
+   * CreatedDate : 12/11/2017
+   * Version :1.0
+   * Requirement: Implement Payment GateWay using Salesforce -->
+<apex:page controller="Payment_instamojo">
+    <apex:form >
+        <apex:commandButton value="oAuth" action="{!authenitfication}"/><br/>
+        <apex:commandButton value="PaymentResponse" action="{!paymentResponse}"/><br/>
+        <apex:outputText value="{!result}"></apex:outputText>
+        <apex:commandButton value="PaymentRequest" action="{!paymentRequest}"/><br/>
+        <apex:outputText value="{!result1}"></apex:outputText>
+    </apex:form>
+
+</apex:page>

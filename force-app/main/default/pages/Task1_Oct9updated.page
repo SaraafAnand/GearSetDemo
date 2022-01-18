@@ -1,0 +1,13 @@
+<apex:page controller="Account_Formula">
+    <apex:form >
+        Enter the expression<apex:inputText value="{!selected}" /> <apex:commandButton value="Search" action="{!search}"/>
+    	<apex:pageBlock Title="AccountList">
+            <apex:pageBlockTable value="{!acc}" var="a">
+                <apex:column headerValue="Name" value="{!a.Name}"/>
+                <apex:column headerValue="Industry" value="{!a.Industry}"/>
+                <apex:column headerValue="Type" value="{!a.Type}"/>
+                <apex:column headerValue="Rating" value="{!a.Rating}"/>
+            </apex:pageBlockTable>
+    	</apex:pageBlock>
+    </apex:form>    
+</apex:page>

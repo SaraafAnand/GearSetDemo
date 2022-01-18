@@ -1,0 +1,96 @@
+<!--*Author:S.Anand
+* Version:40.0
+* Requirement:Create an Opportunity and Opportunity Line items,When we create a new opportunity and with entered product 
+details OpportunityLineItems should create in custom manner.
+* CreatedDate:11/10/2017
+-->
+<apex:page standardController="Opportunity" extensions="Opportunity_OpportuniyLineItems" id="page">
+    <script>
+    function call(myId){
+        // Fetch the Id of row on which change is made  
+        var rowId=myId.split(':'); 
+        // alert(rowId);
+        // Split the id based on':'
+        rowNo=rowId[4]; // page:fm:pb:pbt:rowno:id // Page:fm:pb:pbt:0:pid // page:fm:pb:pbt:1:pid
+        alert(rowNo);
+        // find out the position at which rowni is defined
+        document.getElementById('page:fm:hidden').value=rowNo;
+        // fetch the productname and quntity
+        var prodName=document.getElementById('page:fm:pb:pbt:'+rowNo+':pid').value;
+        var quant=document.getElementById('page:fm:pb:pbt:'+rowNo+':quant').value;
+        // if the productName and quanity is not null then call actionfunction callme 
+        /// action function callme will show method .
+        if(prodName!=null && prodName!='' && quant!=null && quant!='')
+            callme();
+    }
+    function del(Id){
+       
+        var rowno=Id.split(":");
+        alert(rowno[4]);
+        var row=rowno[4];
+        document.getElementById("page:fm:hid").value=row;
+        fun1();
+        
+    }
+	function add(Id){
+       
+        var rowno=Id.split(":");
+        alert(rowno[4]);
+        var row=rowno[4];
+        document.getElementById("page:fm:hidden1").value=row;
+        fun2();
+        
+    }
+    
+    </script>
+    <apex:form id="fm">
+     	<apex:actionFunction name="fun2" action="{!add}"/>
+        <apex:inputHidden value="{!rowadd}" id="hidden1"/>
+        <apex:actionFunction name="fun1" action="{!del}"/>
+        <apex:inputHidden value="{!rowDel}" id="hid"/>
+        <apex:actionFunction name="callme" action="{!show}" rerender="pbt" />
+        <apex:inputHidden value="{!rowNo}" id="hidden" />
+        <apex:pageBlock title="Opportunity" id="pb">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="save" action="{!save}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Opportunity Section">
+                <apex:inputField value="{!op.name}"/>
+                <apex:inputField value="{!op.stageName}"/>
+                <apex:inputField value="{!op.closeDate}"/>
+                <apex:inputField value="{!op.type}"/>
+                <apex:inputField value="{!op.amount}"/>
+            </apex:pageBlockSection>
+            <br/><br/>
+            
+            <apex:pageBlockTable value="{!wrapList}" var="a" id="pbt">
+                <apex:variable var="index" value="{!0}" />
+                <apex:column headerValue="SNO" >
+                    {!index} 
+                    <apex:variable value="{!index+1 }" var="index"/>
+                    <!-- after displaying the rowno ..index will be incremented by one -->
+                </apex:column>
+                <apex:column headerValue="ProductName">
+                    <apex:inputText value="{!a.productname}" id="pid"  onchange="call(this.id)" />                
+                </apex:column>
+                <apex:column headerValue="UnitPrice">
+                    <Apex:inputText value="{!a.unitPrice}"  id="price"/>
+                </apex:column>
+                <apex:column headerValue="Quantity">
+                    <Apex:inputText value="{!a.quantity}"  onchange="call(this.id)" id="quant" />
+                </apex:column>
+                <apex:column headerValue="Total">
+                    <Apex:inputText value="{!a.total}" />
+                </apex:column>
+                <apex:column >
+                  <apex:facet name="header">Action</apex:facet>
+                  <apex:commandButton value="Add" onclick="add(this.id)" reRender="pbt"/>
+               </apex:column>
+                <apex:column >   
+                <apex:commandButton value="Del"  reRender="pbt" onclick="del(this.id)" />
+            </apex:column>
+        </apex:pageBlockTable>
+        
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

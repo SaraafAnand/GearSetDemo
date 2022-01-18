@@ -1,0 +1,28 @@
+<aura:component controller="TestPickList">
+<aura:attribute name="TypePicklist" type="String[]" /> 
+<aura:attribute name="TypePicklist1" type="String[]" />     
+<aura:attribute name="val" type="String" default="" />     
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+        <div class="slds-grid slds-gutters">
+  <div class="slds-col slds-size_2-of-3">
+        <lightning:select aura:id="sel" name="OpportunityType" label="OpportunityType" onchange="{!c.onchange}" >
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.TypePicklist1}" var="mapValue">
+                <option value="{!mapValue}">{!mapValue}</option>
+            </aura:iteration>
+        </lightning:select>
+      {!v.val}
+      {!v.val==sep}
+      <aura:if isTrue="{!v.val == 'SEP'}">
+      <lightning:select aura:id="sel1" name="seoType" label="seoTYpe" value="{}" >
+            <option value="">choose one...</option>
+            <aura:iteration items="{!v.TypePicklist}" var="mapValue">
+                <option value="{!mapValue}">{!mapValue}</option>
+            </aura:iteration>
+        </lightning:select>
+      </aura:if>
+      </div>
+  </div>
+   
+</aura:component>

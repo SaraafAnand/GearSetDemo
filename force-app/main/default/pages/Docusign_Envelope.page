@@ -1,0 +1,11 @@
+<apex:page controller="Docusign_Envelope" >
+    <h1>Your eSignature request is being sent to DocuSign API!</h1>
+<hr/>
+<apex:form >
+<apex:commandButton value="Send Again!" action="{!create}"/>
+      <apex:inputFile value="{!File}"   />
+
+</apex:form>
+<hr/>
+<strong>The DocuSign EnvelopeId:</strong>{!response}<br/>
+</apex:page>

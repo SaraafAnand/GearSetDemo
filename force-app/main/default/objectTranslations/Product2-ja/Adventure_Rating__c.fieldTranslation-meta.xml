@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Adventure Rating --></label>
+        <name>Adventure_Rating__c</name>
+        <picklistValues>
+            <masterLabel>(1) Easy Rider</masterLabel>
+            <translation><!-- (1) Easy Rider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>(2) Moderate Challenge</masterLabel>
+            <translation><!-- (2) Moderate Challenge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>(3) Thrill-Seeker</masterLabel>
+            <translation><!-- (3) Thrill-Seeker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>(4) Code Habanero Alert</masterLabel>
+            <translation><!-- (4) Code Habanero Alert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>(5) Adrenaline Junkie</masterLabel>
+            <translation><!-- (5) Adrenaline Junkie --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

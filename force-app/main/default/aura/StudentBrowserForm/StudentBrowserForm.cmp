@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	<h1>This Is For Student form</h1>
+    
+</aura:component>

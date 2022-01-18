@@ -1,0 +1,50 @@
+<apex:page controller="ContactListController"
+    contentType="{!CASE($CurrentPage.parameters.format,'excel','application/vnd.ms-excel#Contact_List_'+TEXT(NOW())+'.ms-excel','powerpoint','application/vnd.ms-word#Contact_List_'+TEXT(NOW())+'.ms-word','html','text/html#Contact_List_'+TEXT(NOW())+'.html','image','image/jpeg','')}"
+    renderAs="{!IF($CurrentPage.parameters.format == 'pdf','pdf','')}"
+    showHeader="false" sidebar="false">
+    <style>
+.oddclass {
+    background: lightskyblue;
+}
+
+.evenclass {
+    background: white;
+}
+</style>
+                <a href="data:{!contentType};content-disposition:attachment;base64,{!base64Value}">Download file</a>
+    <apex:pageBlock title="Contact Table" tabStyle="Contact">
+        <apex:pageBlockButtons dir="RTL"
+            rendered="{!$CurrentPage.parameters.format == null}">
+            <a href="data:{!contentType};content-disposition:attachment;base64,{!base64Value}">Download file</a>
+            <apex:form >
+                <apex:commandLink action="{!pageOut}" value="Excel Output"
+                    target="_blank" style="margin:5px;">
+                    <apex:param name="format" value="excel" />
+                </apex:commandLink>
+                <apex:commandLink action="{!pageOut}" value="HTML Output"
+                    target="_blank" style="margin:5px;">
+                    <apex:param name="format" value="html" />
+                </apex:commandLink>
+                <apex:commandLink action="{!pageOut}" value="PDF Output"
+                    target="_blank" style="margin:5px;">
+                    <apex:param name="format" value="pdf" />
+                </apex:commandLink>
+                <apex:commandLink action="{!pageOut}" value="Image Output"
+                    target="_blank" style="margin:5px;">
+                    <apex:param name="format" value="image" />
+                </apex:commandLink>
+                <apex:commandLink action="{!pageOut}" value="Word Output"
+                    target="_blank" style="margin:5px;">
+                    <apex:param name="format" value="powerpoint" />
+                </apex:commandLink>
+            </apex:form>
+        </apex:pageBlockButtons>
+        <apex:pageblockTable value="{!ContactList}" var="cont"
+            rowClasses="oddclass,evenclass" border="1" cellpadding="2"
+            cellspacing="1" style="background:mediumspringgreen;">
+            <apex:column value="{!cont.Name}" />
+            <apex:column value="{!cont.Owner.Name}" headerValue="Owner Name" />
+            <apex:column value="{!cont.Account.Name}" />
+        </apex:pageblockTable>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" >
+    <aura:attribute name="recordError" type="object"></aura:attribute>
+    <aura:attribute name="record" type="object"></aura:attribute>
+    <aura:attribute name="recordFields" type="object"></aura:attribute>
+    <force:recordData aura:id="recordEdit" 
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.recordFields}"
+                      mode="EDIT"></force:recordData>
+	<div class="RecordDetails">
+    <lightning:card iconName="standard:account" title="{!v.recordFields.Name}"></lightning:card>
+    <div class="slds-p-top_medium">
+        <p class="slds-text-heading_medium"><lightning:formattedText value="{!v.recordFields.Industry}" ></lightning:formattedText></p>
+        <p class="slds-text-heading_medium"><lightning:formattedText value="{!v.recordFields.Rating}" ></lightning:formattedText></p>
+        </div>
+    </div>
+    <div class="EditRecord">
+    <lightning:card iconName="standard:account" title="{!v.recordFields.Name}"></lightning:card>
+    <div class="slds-p-top_medium">
+     <p class="slds-text-heading_medium"><lightning:input label="Name" value="{!v.recordFields.Name}" ></lightning:input></p>
+     <lightning:button class="slds-button_brand" label="Save Account" variant="brand" onclick="{!c.handleSaveMethod}"></lightning:button>   
+        </div>
+    </div>
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        {!v.recordError}
+    </aura:if>
+</aura:component>

@@ -1,0 +1,19 @@
+<apex:page showHeader="false" controller="VFLoginFlowController">
+  <h1>You are in VF Login Flow</h1>
+  <apex:pageMessages />
+    <p>
+        Your account has been created!
+Maecenas id tristique dui, a aliquet magna. Vivamus et lacus vitae neque auctor finibus porta non nisl. Cras vel eros rhoncus, sagittis erat in, sollicitudin orci. Curabitur ut quam pulvinar, tempor augue nec, tempus lacus. Vivamus convallis suscipit libero ut commodo. Nulla iaculis non augue ut dapibus. Suspendisse suscipit mauris sit amet sem bibendum, eget dignissim urna ultrices. Vivamus lorem tortor, volutpat et tincidunt quis, finibus sed nunc. Vestibulum nec turpis pulvinar, pulvinar dolor ultricies, elementum lacus. Nam sit amet lobortis felis. Mauris consequat euismod enim, in laoreet elit accumsan nec. Cras eu eros sit amet nunc consectetur congue non nec diam. In tincidunt luctus sapien non varius. Curabitur venenatis vitae magna sagittis tempus. Aliquam maximus egestas luctus.
+
+Nullam elementum porta consequat. Donec at semper orci, quis placerat nisl. Nunc diam mi, vestibulum quis elementum non, elementum non nibh. Vestibulum ligula erat, viverra sit amet arcu non, dictum facilisis dui. Vivamus condimentum massa non justo egestas, ac auctor purus interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin sagittis interdum ex, at lacinia quam tincidunt id. Fusce suscipit in lectus vitae dictum. Mauris ut placerat risus, id pulvinar tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer non vestibulum magna.
+
+Aliquam pretium vehicula lectus, in lacinia orci facilisis at. Nam vehicula mi quis ultrices congue. Pellentesque vitae metus scelerisque, porta felis id, fermentum purus. Integer bibendum turpis vel rhoncus posuere. Vivamus lacus est, cursus eget lacus vitae, varius pharetra lectus. Duis a purus ac urna finibus faucibus nec ac tellus. Vivamus mi libero, bibendum id mi id, eleifend pharetra tellus. Fusce hendrerit ut felis quis ultricies. Duis id auctor nulla.
+    </p>
+  
+  <apex:form >
+  {!UserId}
+       <apex:inputCheckbox value="{!flag}"/> <p> I accept The Terms and COnditions </p> 
+    <apex:commandButton action="{!FinishLoginFlowHome}" value="Finish and Go to Home"/>
+    <apex:commandButton action="{!FinishLoginFlowStartUrl}" value="Finish and Go to StartUrl"/>
+  </apex:form>
+</apex:page>

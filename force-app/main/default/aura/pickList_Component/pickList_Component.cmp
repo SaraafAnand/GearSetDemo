@@ -1,0 +1,12 @@
+<aura:component controller="pickList_Lightning">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+	<aura:attribute name="sObjectName" type="account" default="{sobjectType : 'Account'}"></aura:attribute>
+   <div class="slds-form-element">
+      <label class="slds-form-element__label" for="select-01">Select Label</label>
+      <div class="slds-select_container">
+        <lightning:select aura:id="select" name="select" label="AccountIndustry" onchange="{!c.selectedValue}"/> 
+         <!--   <ui:inputSelect aura:id="select" class="slds-select"  change="{!c.selectedValue}"/> -->
+      </div>
+   </div>
+    
+</aura:component>

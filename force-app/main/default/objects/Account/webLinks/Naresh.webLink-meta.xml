@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Naresh</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Naresh</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+alert(&#39;banking&#39;); 
+var x=&#39;{!Account.Industry}&#39;; 
+
+if(x==&#39;Banking&#39;) 
+{ 
+alert(&#39;Industry Is Banking&#39;); 
+} 
+else 
+{ 
+alert(&#39;Industry Is Not Banking&#39;); 
+}</url>
+</WebLink>

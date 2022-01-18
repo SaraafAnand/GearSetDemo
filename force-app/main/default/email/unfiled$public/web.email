@@ -1,0 +1,7 @@
+Hi {!Contact.LastName},
+
+we received your request   kindly click thwe below link
+to proceed
+https://anandovlightning-dev-ed--c.ap5.visual.force.com/apex/Resetpassword?core.apexpages.request.devconsole=1
+
+Thanks

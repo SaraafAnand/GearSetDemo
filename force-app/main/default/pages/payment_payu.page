@@ -1,0 +1,18 @@
+<!-- * Author : S.Anand
+   * CreatedDate : 12/11/2017
+   * Version :1.0
+   * Requirement: Implement Payment GateWay using Salesforce
+ -->
+
+<apex:page controller="Payment_payu">
+    <apex:form >
+        <apex:commandButton value="PaymentResponse" action="{!paymentResponse}"/><br/>
+        <apex:outputText value="{!response_Result}"></apex:outputText>
+           <apex:commandButton value="Payment" action="{!payment}"/><br/>
+        <apex:outputText value="{!payment_Result}"></apex:outputText>
+        
+           <apex:commandButton value="Payout" action="{!payout}"/><br/>
+        <apex:outputText value="{!payout_Result}"></apex:outputText>
+    </apex:form>
+
+</apex:page>

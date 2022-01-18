@@ -1,0 +1,36 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0" standardController="Account" applyBodyTag="False" applyHtmlTag="False">
+    <head>
+    
+      <apex:slds />
+    </head>
+  
+    <body class="slds-scope">
+      <!-- MASTHEAD -->
+    <p class="slds-text-heading--label slds-m-bottom--small">
+      SalesForce Lightning System WeBDemo
+    </p>
+    <!-- / MASTHEAD -->   
+    
+    <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+  <div class="slds-size_2-of-2">
+    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+    <div class="slds-media__figure">
+    <span class="slds-avatar slds-avatar_medium">
+      <img src="{!URLFOR($Asset.SLDS, 'assets/images/avatar1.jpg')}" alt="" />
+    </span>
+  </div>
+    <div class="slds-media__body">
+    <p class="slds-text-title_caps slds-line-height_reset">Accounts</p>
+    <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="My Accounts">{!Account.Name}</h1>
+  </div>
+</div>    
+  </div>
+  </div>
+  <div class="slds-size_1-of-2">
+    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">.slds-size_1-of-2</div>
+  </div>
+  <div class="slds-size_1-of-2">
+    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">.slds-size_1-of-2</div>
+  </div>
+    </body>
+</apex:page>

@@ -1,0 +1,19 @@
+<aura:component>
+    <aura:attribute name="currStep" type="Integer" default="1"/>
+    <aura:attribute name="isNextDisable" type="Boolean" default="false"/>
+    <aura:attribute name="title" type="String" default="Campaign Details"/>
+    <div class="container">
+      <ul class="progressbar">
+        <li class="{!v.currStep== 1 ? 'active':''}">Campaign Details</li>
+        <li class="{!v.currStep== 2 ? 'active':''}">Campaign Scripts</li>
+        <li class="{!v.currStep== 3 ? 'active':''}">Representative Scripts</li>
+        <li class="{!v.currStep== 4 ? 'active':''}">Finish</li>  
+      </ul>
+    </div>
+       <div class="">
+       <lightning:layout > 
+           <c:CampaignDetailsCmp></c:CampaignDetailsCmp>
+           </lightning:layout>
+      </div>
+      <lightning:button variant="base" label="Next" title="Next" onclick="{!c.handleClick }" disabled= "{!v.isNextDisable}" />
+</aura:component>

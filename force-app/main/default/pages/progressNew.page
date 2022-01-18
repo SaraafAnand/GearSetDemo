@@ -1,0 +1,121 @@
+<apex:page >
+    
+<script type="text/javascript">
+function myFunction1(){
+document.getElementById('pat').className = 'active';
+document.getElementById('pat').className = 'done';
+
+}
+function myFunction2(){
+document.getElementById('pre').className = 'active';
+document.getElementById('pre').className = 'done';
+
+}
+function myFunction3(){
+document.getElementById('Rev').className = 'active';
+document.getElementById('Rev').className = 'done';
+
+}
+</script>
+
+<style type="text/css">
+
+.progress {
+width: 100%;
+list-style: none;
+list-style-image: none;
+margin: 20px 0 20px 0;
+padding: 0;
+}
+.progress li {
+float: left;
+text-align: center;
+position: relative;
+}
+.progress .name {
+display: block;
+vertical-align: bottom;
+text-align: center;
+margin-bottom: 1em;
+color: black;
+opacity: 0.3;
+}
+.progress .step {
+color: black;
+border: 3px solid silver;
+background-color: silver;
+border-radius: 50%;
+line-height: 1.2;
+width: 1.2em;
+height: 1.2em;
+display: inline-block;
+z-index: -1;
+}
+.progress .step span {
+opacity: 0.3;
+}
+.progress .active .name,
+.progress .active .step span {
+opacity: 1;
+}
+.progress .step:before {
+content: "";
+display: block;
+background-color: silver;
+height: 0.4em;
+width: 50%;
+position: absolute;
+bottom: 0.6em;
+left: 0;
+right: 0;    
+z-index: 1;
+}
+.progress .step:after {
+content: "";
+display: block;
+background-color: #ccc;
+height: 0.4em;
+width: 110%;
+position: absolute;
+bottom: 0.6em;
+}
+.progress li:first-of-type .step:before {
+display: none;
+}
+.progress li:last-of-type .step:after {
+display: none;
+}
+.progress .done .step,
+.progress .done .step:before,
+.progress .done .step:after,
+.progress .active .step,
+.progress .active .step:before {
+background-color: yellowgreen;
+}
+.progress .done .step,
+.progress .active .step {
+border: 3px solid yellowgreen;
+}
+</style>    
+<html>
+<!-- Progress Tracker v2 -->
+<ol class="progress" data-steps="3">
+<li id="pat">
+<span class="name">PATIENT</span>
+<span class="step"><span>1</span></span>
+</li>
+<li id="pre">
+<span class="name">PRESCRIPTION</span>
+<span class="step"><span>2</span></span>
+</li>
+<li id="Rev">
+<span class="name">REVISIT</span>
+<span class="step"><span>3</span></span>
+</li>
+        </ol><br></br>
+<button name="button1" id="but1" onclick="myFunction1()">Click me1</button>
+<button name="button2" id="but2" onclick="myFunction2()">Click me2</button>
+<button name="button3" id="but3" onclick="myFunction3()">Click me3</button>
+</html>
+
+</apex:page>

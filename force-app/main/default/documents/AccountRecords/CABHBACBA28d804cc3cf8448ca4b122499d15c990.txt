@@ -1,0 +1,4 @@
+AccountId,Name,Industry,Rating,
+0017F00000DLFYWQA5,Name,Industry,Rating,
+0017F00000DLFYXQA5,Patrica,Banking,Hot,
+0017F00000DLFYYQA5,Williams,Banking,Cold,

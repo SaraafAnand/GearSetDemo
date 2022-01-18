@@ -1,0 +1,12 @@
+<!-- * Author : S.Anand
+   * CreatedDate : 12/11/2017
+   * Version :1.0
+   * Requirement: Implement Payment GateWay using Salesforce -->
+
+<apex:page controller="Payment_PayPal">
+    <apex:form >
+      
+        <apex:outputText value="{!xml}"></apex:outputText>
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,4 @@
+<apex:page controller="Task2_oct5" sidebar="false" showHeader="false">
+    <apex:sectionHeader title="Account" subtitle="Names"/>
+    	<apex:detail relatedList="false"/>
+</apex:page>

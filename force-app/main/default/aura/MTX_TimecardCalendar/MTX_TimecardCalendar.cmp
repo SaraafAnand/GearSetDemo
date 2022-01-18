@@ -1,0 +1,36 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:RegisterEvent name='UpdateTimesheet' type='c:MTX_CalendarToSheet_Event'/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="today" type="Date" default=""/>
+    <div class='Bar'>
+        <div class="demo-only" style="width:440px">
+            <div class="slds-form slds-form_compound">
+                <fieldset class="slds-form-element">
+                    <div class=" slds-form-element__group ">
+                        <div class="slds-form-element__row ">
+                            <div class="slds-form-element slds-size_1-of-2">
+                                <lightning:button label='Delete Selected Row' class='buttonmargin'/>
+                            </div>
+                            <div class="slds-form-element slds-size_1-of-10" style='width:80%'>
+                                <table >
+                                    <tr>
+                                        <td>
+                                            Week Ending
+                                        </td>
+                                        
+                                        <td>
+                                            <ui:inputDate aura:id="expdate"  class="field buttonmargin" value="{!v.today}" displayDatePicker="true" />
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        
+    </div>
+</aura:component>

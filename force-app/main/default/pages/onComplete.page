@@ -1,0 +1,9 @@
+<apex:page controller="onComplete" >
+    <script>
+    function myJSFunction(){ alert("hi"); }
+</script>
+<apex:form >
+<apex:actionfunction name="test" action="{!myAction}" oncomplete="myJSFunction();"/>
+    <apex:commandButton value="save"  onclick="test()" />
+</apex:form>
+    </apex:page>

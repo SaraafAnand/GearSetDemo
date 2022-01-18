@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validate</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>validate</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}  
+
+     {!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}  
+//alert(&#39;{!Contact.Title}&#39;);
+if(&#39;{!Contact.Title}&#39; != &#39;&#39;){
+window.location.href = &#39;/00Q7F00000Aw6T5&#39;;
+}
+else{
+
+alert(&#39;Please populate Title. Email and Phone before procedding...&#39;);
+
+}</url>
+</WebLink>

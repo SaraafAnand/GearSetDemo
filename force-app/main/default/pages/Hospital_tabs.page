@@ -1,0 +1,36 @@
+<apex:page controller="Hospital_Tabs" showHeader="false" sidebar="false">
+    <apex:form >
+        <apex:tabPanel id="panel" selectedTab="{!selectedtab}" width="500" height="500">
+            <apex:tab id="patienttab" label="Patient" title="Patient" labelWidth="300">
+                <apex:outputLabel value="PatientName">
+                <apex:inputText value="{!patientName}"/>
+                </apex:outputLabel>
+                <apex:outputLabel value="CaseType">
+                <apex:inputText value="{!caseType}"/>
+                </apex:outputLabel>
+                <apex:commandButton value="Next" action="{!enableTab2}" reRender="panel"/>
+            
+            </apex:tab>
+            <apex:tab id="Prescriptiontab" label="Prescription" title="Prescription" labelWidth="300">
+                <apex:outputLabel value="DrugName">
+                <apex:inputText value="{!drug}" />
+                </apex:outputLabel>
+                <apex:outputLabel value="Dose">
+                <apex:inputText value="{!dose}"/>
+                </apex:outputLabel>
+                <apex:commandButton value="Next" action="{!enableTab3}" reRender="panel"/>
+                <apex:commandButton value="Previous" action="{!enableTab1}" reRender="panel"/>
+            </apex:tab>
+            <apex:tab id="Revisittab" label="Revisit" title="Revisit" labelWidth="200">
+                <apex:outputLabel value="Date of Appointment">
+                <apex:inputText value="{!appointment}" />
+                </apex:outputLabel>
+                <apex:outputLabel value="DoctorName">
+                <apex:inputText />
+                </apex:outputLabel>
+                <apex:commandButton value="Finish" action="{!save}"/>
+                <apex:commandButton value="Previous" action="{!enableTab2}" reRender="panel"/>
+            </apex:tab>
+        </apex:tabPanel>
+    </apex:form>
+</apex:page>

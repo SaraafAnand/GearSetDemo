@@ -1,0 +1,22 @@
+<aura:component >
+     
+	<aura:attribute name="recordId" type="String" 
+      description="The recordId of object to be displayed"/>
+    <aura:attribute name="disabled" type="Boolean" default="false" 
+      description="To disable the button"/>
+    <lightning:overlayLibrary aura:id="popuplib"/>
+    <lightning:recordEditForm onsubmit="{!c.handleSubmit}"
+                              onsuccess="{!c.handleSuccess}"
+                              recordId="{!v.recordId}"
+                              objectApiName="Account" aura:id="form">
+        <!-- This is used to display the messages -->
+        <lightning:messages/>
+        <lightning:inputField fieldName="Name"/>
+        <lightning:inputField fieldName="Rating"/>
+        <div class="slds-m-top_medium">
+            <lightning:button disabled="{!v.disabled}" variant="brand" type="submit" name="save" label="save" />
+        </div>
+    </lightning:recordEditForm>
+    
+ 
+</aura:component>

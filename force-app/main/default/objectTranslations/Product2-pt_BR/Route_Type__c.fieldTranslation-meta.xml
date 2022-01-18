@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Route Type --></label>
+        <name>Route_Type__c</name>
+        <picklistValues>
+            <masterLabel>Bouldering</masterLabel>
+            <translation><!-- Bouldering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-Pitch Climb</masterLabel>
+            <translation><!-- Multi-Pitch Climb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psicobloc</masterLabel>
+            <translation><!-- Psicobloc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sport Climbing</masterLabel>
+            <translation><!-- Sport Climbing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top Rope</masterLabel>
+            <translation><!-- Top Rope --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trad Climbing</masterLabel>
+            <translation><!-- Trad Climbing --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

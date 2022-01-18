@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:image url="{!$Resource.Tiger}" width="150" height="200"/>
+    <apex:image url="{!$Resource.Meditation}" width="100" height="200"/>
+</apex:page>

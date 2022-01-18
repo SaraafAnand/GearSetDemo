@@ -1,0 +1,65 @@
+<apex:page >
+    <style>
+/***********************************************************************
+http://function-code.blogspot.com/2013/03/horizontal-tabs-in-html-with-css.html
+My code is free to use, but not free to republish
+************************************************************************/
+ul.tabs
+{
+    padding: 7px 0;
+    font-size: 0;
+    margin:0;
+    list-style-type: none;
+    text-align: left;
+}
+        
+ul.tabs li
+{
+    display: inline;
+    margin: 0;
+    margin-right:3px;
+}
+        
+ul.tabs li a
+{
+    font: normal 12px Verdana;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    padding: 7px 16px;
+    border: 1px solid #CCC;
+    border-bottom-color:#B7B7B7;
+    color: #000;
+    background: #F0F0F0;
+    border-radius: 6px 6px 0px 0px;
+ -moz-border-radius: 6px 6px 0px 0px;
+    outline:none;
+}
+
+ul.tabs li a:hover
+{
+    border: 1px solid #B7B7B7;
+    background:#E0E0E0;
+}
+        
+ul.tabs li.selected a
+{
+    position: relative;
+    top: 0px;
+    font-weight:bold;
+    background: white;
+    border: 1px solid #B7B7B7;
+    border-bottom-color: white;
+}
+</style>
+    <apex:form >
+   <div>
+       <ul id="tab_ul" class="tabs">
+        <li class="selected"><a rel="tab_div1" href="#" onclick="javascript:ShowMyDiv(this);">Tab 1</a></li>
+        <li class=""><a rel="tab_div2" href="#" onclick="javascript:ShowMyDiv(this);">Tab 2</a></li>
+        <li class=""><a rel="tab_div3" href="#" onclick="javascript:ShowMyDiv(this);">Tab 3</a></li>
+        <li class=""><a rel="tab_div4" href="#" onclick="javascript:ShowMyDiv(this);">Tab 4</a></li>
+</ul>
+        </div>
+    </apex:form>
+</apex:page>

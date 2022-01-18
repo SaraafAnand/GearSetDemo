@@ -1,0 +1,20 @@
+<apex:page standardController="opportunity" recordSetvar="opportunities" extensions="updateoppclass">
+
+<apex:form >
+<apex:pageBlock title="Opportunity List" id="opportunity_list">
+<apex:pageBlockTable value="{!opportunities}" var="a1">
+
+<apex:column value="{!a1.Name}"/>
+<apex:column value="{!a1.stagename}"/>
+<apex:column value="{!a1.Amount}"/>
+<apex:column value="{!a1.CloseDate}"/>
+<apex:column value="{!a1.probability}"/>
+
+</apex:pageBlockTable>
+<apex:pageblockbuttons >
+<apex:commandButton value="Cancel"/>
+<apex:commandButton value="next" action="{!gotostep2}"/>
+</apex:pageblockbuttons>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

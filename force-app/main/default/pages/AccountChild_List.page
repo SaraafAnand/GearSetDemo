@@ -1,0 +1,37 @@
+<apex:page controller="AccountChild_List" id="page">
+    
+    <html>
+        <head>
+            <meta charset="Utf-8"/>
+        </head>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/message.js"></script>
+    </html>
+    
+    <apex:form id="form">
+        <apex:pageBlock title="AccountDetails" tabStyle="Account" id="pb">
+            <apex:pageBlockTable value="{!wrapperList}" var="acc" id="pbt">
+                <apex:column >
+                    <apex:commandButton value="+" id="hideadd"/>
+                    
+                </apex:column>
+                <!--         <apex:column headerValue="action" id="c1">
+<apex:commandButton image="{!URLFOR($Resource.addimage)}" style="height:20px;border-radius:9px;width:20px;backgroundcolor:lightBlue;" id="but" onclick="button()"/>
+</apex:column>    -->
+                <apex:column headerValue="Accounts" value="{!acc.accountWrapper.Name}" />
+                <apex:column headerValue="Contacts" >
+                    <apex:pageBlockTable value="{!acc.contactsWrapper}" var="con" columns="1" columnsWidth="30" >
+                        <apex:column headerValue="LastName" value="{!con.LastName}"/>
+                    </apex:pageBlockTable>
+                </apex:column>
+                <apex:column headerValue="Opportunities" >
+                    <apex:pageBlockTable value="{!acc.opportunitiesWrapper}" var="opp" >
+                        
+                        <apex:column headerValue="Name" value="{!opp.Name}"/>
+                        <apex:column headerValue="stage" value="{!opp.stageName}"/>
+                    </apex:pageBlockTable>
+                </apex:column>                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

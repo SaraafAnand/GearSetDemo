@@ -1,0 +1,5 @@
+<apex:page >
+    <script>
+    alert('Message');
+    </script>
+</apex:page>

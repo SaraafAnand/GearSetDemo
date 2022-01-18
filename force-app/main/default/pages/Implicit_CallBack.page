@@ -1,0 +1,8 @@
+<apex:page controller="DocuSign_ImplicitGrant" action="{!readcode}" >
+    <apex:form >
+        {!code}
+    <apex:commandButton value="sendDocumentRequest" action="{!UploadFile}" />
+       {!document_Request}
+        <apex:inputFile value="{!File}" contentType="{!filetype}" filename="{!filename}"  />
+        </apex:form>
+</apex:page>

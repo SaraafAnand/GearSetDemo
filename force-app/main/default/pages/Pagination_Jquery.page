@@ -1,0 +1,37 @@
+<apex:page controller="CollectionLimitController" sidebar="false">
+<head>
+    <apex:includescript value="https://code.jquery.com/jquery-1.11.1.min.js" / >
+    <apex:includescript value="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js" />
+    <apex:stylesheet value="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.css" />
+    <apex:includescript value="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" / >
+    <apex:includescript value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
+    
+    <script>
+        var sk= $.noConflict();
+        var tableData = '{!AccountInformationString}';
+        //alert('tableData :'+tableData );
+        sk(document).ready(function() {
+            tableData =tableData .replace(/(&quot\;)/g,"\"")
+            tableData  = tableData .replace(/(&lt\;)/g,'<').replace(/(&gt\;)/g,'>').replace(/(&#39\;)/g,'\'').replace(/(&amp\;)/g,'&');
+            var jsonData = JSON.parse(tableData)
+            //alert('*****jsonData :'+jsonData );
+            console.log(jsonData);
+            generateTable(JSON.parse(tableData));
+                
+        });
+        function generateTable(jsonData){
+            var tableHeaders="";
+            $.each(jsonData.columns, function(i, val){
+                tableHeaders += "<th>" + val + "</th>";
+            });
+            $("#tableDiv").empty();   
+            $("#tableDiv").append('<table id="displayTable" class="display" cellspacing="0" width="100%"><thead><tr>' + tableHeaders + '</tr></thead></table>');
+            $("#displayTable").dataTable(jsonData);
+        }
+    </script>
+</head>
+<body>
+    <div id="tableDiv" style="width:100%;overflow: auto;"></div>
+
+</body>
+</apex:page>

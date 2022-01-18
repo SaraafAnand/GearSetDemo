@@ -1,0 +1,5 @@
+<apex:page controller="outlook_class">         <!-- controller="outlook_class"offline_outlook> -->
+ <apex:form >
+  <apex:commandButton value="Login" action="{!LoginPage}"/>
+ </apex:form>
+</apex:page>

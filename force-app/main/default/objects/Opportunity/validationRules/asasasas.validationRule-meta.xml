@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>asasasas</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL( StageName , &#39;Qualification&#39;), $User.Id &lt;&gt;&#39;00540000000leyp&#39; )</errorConditionFormula>
+    <errorMessage>Error</errorMessage>
+</ValidationRule>

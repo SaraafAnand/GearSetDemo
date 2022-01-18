@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- ContactApp --></label>
+        <name>Anand</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Box --></label>
+        <name>Box</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- CapitalInfoOrg --></label>
+        <name>CapitalInfoOrg</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Coveo --></label>
+        <name>Coveo</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- DeliveryTracker --></label>
+        <name>DeliveryTracker</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- DreamHouse_demo --></label>
+        <name>DreamHouse_demo</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- DupeBlocker --></label>
+        <name>DupeBlocker</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- DupeBlocker --></label>
+        <name>DupeBlockerLightning</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- DupeCatcher --></label>
+        <name>DupeCatcher</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Pin Tags --></label>
+        <name>Lightning_Tags</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Metadata Search --></label>
+        <name>Metadata_Search</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Metadata Search --></label>
+        <name>Metadata_Search_Lightning</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Module Tracker --></label>
+        <name>Module_Tracker</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Salesforce CPQ --></label>
+        <name>QuoteQuickly</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Relaxation Gauntlet --></label>
+        <name>Relaxation_Gauntlet</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- ConListApp --></label>
+        <name>SAnand</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Test Generator --></label>
+        <name>Test_Generator</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- ZBSLightning --></label>
+        <name>ZBSLightning</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- Share button label --></label>
+        <name>SBQQ__Share</name>
+    </customLabels>
+    <customPageWebLinks>
+        <label><!-- Configuration --></label>
+        <name>Configuration</name>
+    </customPageWebLinks>
+    <customPageWebLinks>
+        <label><!-- Configure Salesforce CPQ --></label>
+        <name>ConfigureQuoteQuickly</name>
+    </customPageWebLinks>
+    <customPageWebLinks>
+        <label><!-- DupeBlocker - Configure --></label>
+        <name>DupeBlocker_Configure</name>
+    </customPageWebLinks>
+    <customPageWebLinks>
+        <label><!-- License Manager --></label>
+        <name>License_Manager</name>
+    </customPageWebLinks>
+    <customPageWebLinks>
+        <label><!-- TrailheaDX Registration --></label>
+        <name>TrailheaDX_Registration</name>
+    </customPageWebLinks>
+    <customTabs>
+        <label><!-- AW Instructor --></label>
+        <name>AW_Instructor</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- About Metadata Search --></label>
+        <name>About</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Box Files --></label>
+        <name>Box_Files2</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Box Settings --></label>
+        <name>Box_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Coveo Case Creation --></label>
+        <name>CaseCreation</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Coveo Community Search --></label>
+        <name>CommunitySearch</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Pin Tags Configurations --></label>
+        <name>Configuration</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- ConApp --></label>
+        <name>ContactApp</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- DupeCatcher Application Settings --></label>
+        <name>DC_DupeCatcher_Application_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- DupeCatcher Data Quality --></label>
+        <name>DC_DupeCatcher_Data_Quality</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Getting Started with DupeCatcher --></label>
+        <name>DC_DupeCatcher_Getting_Started</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- DupeBlocker Settings --></label>
+        <name>DupeBlocker_Settings</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- DupeBlocker Settings --></label>
+        <name>DupeBlocker_Settings_VF</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- DupeBlocker Today --></label>
+        <name>DupeBlocker_Today_VF</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Load Data --></label>
+        <name>Load_Data</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Metadata Browser --></label>
+        <name>MetadataBrowser</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Metadata Deploy Demo --></label>
+        <name>MetadataDeployDemo</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Metadata Retrieve Demo --></label>
+        <name>MetadataRetrieveDemo</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Metadata Search --></label>
+        <name>Metadata_Search</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- MyData --></label>
+        <name>MyData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Popular Objects --></label>
+        <name>Popular_Objects</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- QuickQuote --></label>
+        <name>QuickQuote</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Coveo Search --></label>
+        <name>Search</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Test Generator --></label>
+        <name>Test_Generator</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- contactList --></label>
+        <name>contactList</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- ss --></label>
+        <name>ssccccc</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows />
+        <fullName>AccountSync</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>AccountUpdate</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>AccountUpdateRamu</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>AccuntID</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>var_dataProviderType2</name>
+                </fields>
+                <name>Is_Apex_or_Related_Record</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>cmp_Select_Apex_Class</name>
+                </fields>
+                <name>Select_Data_provider_Apex_Class</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>cmp_selectObjectColor</name>
+                </fields>
+                <name>Select_Object_Theme_Color</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>lwc_get_object_name</name>
+                </fields>
+                <fields>
+                    <name>lwc_progress_1</name>
+                </fields>
+                <name>Step_1_Confirm_Object</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>lwc_progress_2</name>
+                </fields>
+                <fields>
+                    <name>lwc_select_child</name>
+                </fields>
+                <name>Step_2_Select_Related_Object</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>lwc_progress_3</name>
+                </fields>
+                <fields>
+                    <name>lwc_title_field</name>
+                </fields>
+                <name>Step_3_Select_Title_Field</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>lwc_date_field</name>
+                </fields>
+                <fields>
+                    <name>lwc_progress_4</name>
+                </fields>
+                <name>Step_4_Select_Date_Field</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>lwc_display_fields</name>
+                </fields>
+                <fields>
+                    <name>lwc_progress_5</name>
+                </fields>
+                <name>Step_5_Select_Display_Fields</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>display_icon_warning</name>
+                </fields>
+                <fields>
+                    <name>lwc_icon_name</name>
+                </fields>
+                <fields>
+                    <name>lwc_progress_6</name>
+                </fields>
+                <name>Step_6_Icon_Selection</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>display_confirmation</name>
+                </fields>
+                <fields>
+                    <name>lwc_progress_8</name>
+                </fields>
+                <name>Step_7_Confirm_record_creation</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>lwc_confirmation</name>
+                </fields>
+                <fields>
+                    <name>lwc_progress_7</name>
+                </fields>
+                <name>Step_7_Confirmation</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>cmp_Verify_apex_class</name>
+                </fields>
+                <fields>
+                    <name>txt_Select_Apex_Class</name>
+                </fields>
+                <name>Verify_Apex_Class</name>
+            </screens>
+        </flows>
+        <fullName>Add_Child_object_to_Config</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>Add_Lookup_to_Tagging</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>CaseTask</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>CaseUpdate</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>Check12</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>Checkrew</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>ContactFlow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>ContactUpate</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <name>Accept</name>
+            </choices>
+            <choices>
+                <name>I_accept</name>
+            </choices>
+            <screens>
+                <fields>
+                    <name>Accept_Field</name>
+                </fields>
+                <fields>
+                    <name>Terms_and_Conditions</name>
+                </fields>
+                <name>Welcome_Screen</name>
+            </screens>
+        </flows>
+        <fullName>LoginFLow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Upload_File</name>
+                </fields>
+                <name>File</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>Company_Name</name>
+                </fields>
+                <fields>
+                    <name>Last_Name</name>
+                </fields>
+                <name>New_Lead</name>
+            </screens>
+        </flows>
+        <fullName>New_Lead</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>OrderCreate</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>ProcedBuilder</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>Publish_Subscription_Event</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>Subscription</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>Tagging_Lookup</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>TaskFlow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows />
+        <fullName>optyLine_check</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Guest Community Case --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Community Case --></label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Cases --></description>
+        <label><!-- Cases --></label>
+        <name>Cases</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads --></description>
+        <label><!-- Leads --></label>
+        <name>Leads</name>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Quotes with Quote Documents --></description>
+        <label><!-- Opportunities with Quotes with Quote Documents --></label>
+        <name>Opportunities_with_Quotes_with_Quote_Documents</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Quotes with Quote Line Groups --></description>
+        <label><!-- Opportunities with Quotes with Quote Line Groups --></label>
+        <name>Opportunities_with_Quotes_with_Quote_Line_Groups</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Quotes with Quote Lines --></description>
+        <label><!-- Opportunities with Quotes with Quote Lines --></label>
+        <name>Opportunities_with_Quotes_with_Quote_Lines</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Scenarios with Duplicate Warnings with Potential Duplicates --></description>
+        <label><!-- Scenarios with Duplicate Warnings with Potential Duplicates --></label>
+        <name>Scenarios_with_Duplicate_Warnings_with_Potential_Duplicates</name>
+        <sections>
+            <label><!-- Duplicate Warnings --></label>
+            <name>Duplicate Warnings</name>
+        </sections>
+        <sections>
+            <label><!-- Potential Duplicates --></label>
+            <name>Potential Duplicates</name>
+        </sections>
+        <sections>
+            <label><!-- Scenarios --></label>
+            <name>Scenarios</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Test --></description>
+        <label><!-- Test --></label>
+        <name>Test</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- TestAccount --></description>
+        <label><!-- TestAccount --></label>
+        <name>TestAccount</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- parent --></description>
+        <label><!-- parent --></label>
+        <name>parent</name>
+        <sections>
+            <label><!-- child --></label>
+            <name>child</name>
+        </sections>
+        <sections>
+            <label><!-- parents --></label>
+            <name>parents</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Screen Flows --></description>
+        <label><!-- Screen Flows --></label>
+        <name>screen_flows_prebuilt_crt</name>
+        <sections>
+            <label><!-- Flow Interview Log Entries --></label>
+            <name>Flow Interview Log Entries</name>
+        </sections>
+        <sections>
+            <label><!-- Flow Interview Logs --></label>
+            <name>Flow Interview Logs</name>
+        </sections>
+    </reportTypes>
+</Translations>
